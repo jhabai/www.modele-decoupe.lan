@@ -1,0 +1,60 @@
+.flex {
+    
+    &-container {
+        @include flexbox;
+    }
+    
+    &-start {
+        @include align-content(flex-start);
+    }
+    
+    &-end {
+        @include align-content(flex-end);
+    }
+    
+    &-vertical-centered {
+        @include align-items(center);
+    }
+    
+    &-justify-centered {
+        @include justify-content(center);
+    }
+    
+    &-centered {
+        @include align-items(center);
+        @include justify-content(center);
+    }
+    
+    &-right {
+        @include justify-content(flex-end);
+    }
+    
+    &-left {
+        @include justify-content(flex-start);
+    }
+    
+    &-column {
+        @include flex-direction(column);
+    }
+    
+    &-wrap {
+        @include flex-wrap(wrap);
+    }
+    
+    &-reverse {
+        @include flex-reverse(row-reverse);
+    }
+
+
+    // Smartphone only
+    // - - - - - - - - - - - -
+    
+    @media #{$small-only} {
+        
+        &-column-small-only {
+            @include flex-direction(column);
+        }
+        
+    }
+    
+}

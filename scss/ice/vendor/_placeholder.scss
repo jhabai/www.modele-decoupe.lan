@@ -9,14 +9,13 @@
 	display: block;
 	width: 100%;
 	color: $input-color;
+    font: $paragraph-font-size $body-font-family;
 	border: $input-border;
 	border-radius: $input-border-radius;
-	font-family: $body-font-family;
-	font-size: $paragraph-font-size;
+	box-shadow: $input-shadow;
 	margin-bottom: $input-margin-bottom;
 	padding: $input-padding;
-	box-shadow: $input-shadow;
-    tranition-duration: .4s;
+    transition-duration: .4s;
 
 	&:focus {
 		box-shadow: $input-focus-shadow;
@@ -34,9 +33,7 @@
 	// Pour rappel, l'élément ::before simulera la case "non cochée" et l'élément ::after viendra la cochée
 
 	+ label {
-		position: relative;
 		margin-bottom: $label-margin-bottom * 2;
-		cursor: pointer;
         margin-left: $label-margin-left;
 
 		&::before {
@@ -124,18 +121,6 @@
 		margin-right: -($row-padding-medium); // 2
 	}
 
-}
-
-
-
-// Alignement vertical
-// - - - - - - - - - - - -
-
-%vertical-center,
-.vertical-center {
-	position: relative;
-	top: 50%;
-	@include transform(translateY(-50%));
 }
 
 

@@ -17,7 +17,7 @@ module.exports = function(grunt) {
         php: {
             server: {
                 options: {
-                    hostname: 'luminaires-online.lan',
+                    //hostname: 'modele-decoupe.lan',
                     port: 9000,
                     keepalive: true,
                     open: true
@@ -62,6 +62,29 @@ module.exports = function(grunt) {
                 ],
                 dest: 'js/app.min.js'
             }
+        },
+
+
+
+        // Notification
+        // - - - - - - - - - - - -
+
+        notify: {
+            sass: {
+                options: {
+                    message: '"SASS complete !"'
+                }
+            },
+            concat: {
+                options: {
+                    message: '"JS complete !"'
+                }
+            },
+            prod: {
+                options: {
+                    message: '"Prod complete !"'
+                }
+            },
         },
 
 
@@ -130,7 +153,7 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: ['js/*.js', 'js/**/*.js'],
-                tasks: ['concat'],
+                tasks: ['concat', 'notify:concat'],
                 options: {
                     spawn: false
                 }
@@ -138,7 +161,7 @@ module.exports = function(grunt) {
 
             sass: {
                 files: 'scss/**/**/*.scss',
-                tasks: ['sass']
+                tasks: ['sass', 'notify:sass']
             }
         }
 
@@ -148,9 +171,16 @@ module.exports = function(grunt) {
 
     // Les tâches par défaut
     grunt.registerTask('default', 'watch');
-    grunt.registerTask('server', ['php']);
+    grunt.registerTask('server', 'php');
 
     // Les tâches de productions
-    grunt.registerTask('prod', ['concat', 'uglify', 'sass', 'combine_mq', 'cssmin']);
+    grunt.registerTask('prod', [
+        'concat',
+        'uglify',
+        'sass',
+        'combine_mq',
+        'cssmin',
+        'notify:prod'
+    ]);
 
 };

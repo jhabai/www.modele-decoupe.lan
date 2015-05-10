@@ -21,17 +21,6 @@ $(document).foundation({
 
 $(function() {
 
-	// Colorbox
-	// - - - - - - - - - - - -
-	// Doc : http://www.jacklmoore.com/colorbox/
-	colorbox_init();
-
-
-	// Hammer
-	// - - - - - - - - - - - -
-	// Doc : http://hammerjs.github.io/getting-started/
-	hammer_swip();
-
 
 	// Carousel
 	// - - - - - - - - - - - -

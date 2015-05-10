@@ -6,27 +6,26 @@
 // - - - - - - - - - - - -
 
 .select {
-	border-color: $select-border-color;
 	position: relative;
 	overflow: hidden;
 	border-width: 1px;
 	border-style: solid;
+	border-color: $select-border-color;
 	margin-bottom: $input-margin-bottom;
 
 	&::after {
 		content: $select-icon;
-		font-size: rem-calc(14);
-		color: $select-icon-color;
 		position: absolute;
 		top: 0;
 		right: rem-calc(-3);
 		bottom: 0;
 		background: white;
-		font-family: icomoon;
+		color: $select-icon-color;
+		font: rem-calc(14) icomoon;
 		text-align: center;
-		pointer-events: none;
-		@include transform(rotate(-90deg));
 		padding: rem-calc(10) rem-calc(16); 
+		@include transform(rotate(-90deg));
+		pointer-events: none;
 	}
 
 	select {

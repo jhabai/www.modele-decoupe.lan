@@ -7,10 +7,18 @@
 // Usage : @include flebox(color .3s ease);
 // - - - - - - - - - - - -
 @mixin flexbox {
+    display: table;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    
+    // Compatibilité IE9
+    .ie9 & > * {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: -4px
+    }
 }
 
 @mixin align-items($value) {
@@ -38,6 +46,38 @@
     -webkit-flex-wrap: $value;
     -ms-flex-wrap: $value;
     flex-wrap: $value;
+}
+
+@mixin flex-direction($value) {
+    -webkit-flex-direction: $value;
+    -ms-flex-direction: $value;
+    flex-direction: $value;
+}
+
+@mixin flex-order($value) {
+    -webkit-order: $value;
+    -ms-flex-order: $value;
+    order: $value;
+}
+
+@mixin align-content($value) {
+    -webkit-align-content: $value;
+    align-content: $value;
+}
+
+@mixin flex-reverse($value) {
+    -webkit-box-orient: $value;
+    -webkit-box-direction: $value;
+    -webkit-flex-direction: $value;
+    -ms-flex-direction: $value;
+    flex-direction: $value;
+}
+
+@mixin flex-grow($value) {
+    -webkit-box-flex: $value;
+    -webkit-flex-grow: $value;
+    -ms-flex-positive: $value;
+    flex-grow: $value;
 }
 
 
@@ -72,6 +112,11 @@
     transform-origin: $origin;
 }
 
+@mixin perspective($val) {
+    -webkit-perspective: $val; 
+    perspective: $val;
+}
+
 
 
 // Dégrader
@@ -79,14 +124,14 @@
 // - - - - - - - - - - - -
 
 @mixin background-gradient($startColor, $endColor) {
-    background-color: $startColor; // IE8-9
-    background-image: -webkit-linear-gradient($startColor, $endColor);
-    background-image: linear-gradient($startColor, $endColor);
+    background: -webkit-linear-gradient($startColor, $endColor);
+    background: linear-gradient($startColor, $endColor);
 }
 
 
 
 // Animation
+// Usage : @include animation(name);
 // - - - - - - - - - - - -
 
 @mixin keyframes($name) {
@@ -137,4 +182,66 @@
 @mixin animation($animation...) {
     -webkit-animation: $animation;
     animation: $animation;
+}
+
+
+
+// User select
+// Usage : @include user-select($value);
+// - - - - - - - - - - - -
+
+@mixin user-select($value) {
+    -webkit-user-select: $value;
+    -moz-user-select: $value;
+    -ms-user-select: $value;
+    user-select: $value;
+}
+
+
+
+// Placeholder
+// - - - - - - - - - - - -
+
+@mixin placeholder {
+    &::-webkit-input-placeholder { @content }
+    &::-moz-placeholder { @content }
+    &:-ms-input-placeholder { @content }
+}
+
+
+
+// Row center
+// - - - - - - - - - - - -
+
+@mixin row-center {
+    max-width: $row-width;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+// Column
+// - - - - - - - - - - - -
+
+@mixin column-count($value) {
+    -webkit-column-count: $value;
+    -moz-column-count: $value;
+    column-count: $value;
+}
+
+@mixin column-gap($value) {
+    -webkit-column-gap: $value;
+    -moz-column-gap: $value;
+    column-gap: $value;
+}
+
+
+// Placeholder
+// - - - - - - - - - - - -
+
+@mixin placeholder {
+    ::-webkit-input-placeholder { @content }
+    ::-moz-placeholder          { @content }
+    :-ms-input-placeholder      { @content }
 }
