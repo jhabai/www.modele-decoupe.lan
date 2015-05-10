@@ -1,0 +1,26 @@
+// Header
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.header-sticky {
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+
+    // PC
+    // - - - - - - - - - - - -
+    
+    @media #{$large-up} {
+        right: rem-calc(17);
+    }
+}
+
+.l-header {
+    
+	&.row {
+		@extend %padding-row;
+	}
+    
+}

@@ -1,0 +1,98 @@
+.gradient {
+    overflow: hidden;
+    @include background-gradient(#1E88E5, #64B5F6);
+}
+
+.elements {
+    position: relative;
+    min-height: 100vh;
+    background: url('/images/svg/404/404-decors-01-01.svg') center 252px no-repeat;
+    background-size: 100%;
+}
+
+@media #{$medium-only} {
+
+    .elements {
+//        @include transform(scale(2) translateY(23%));
+        @include transform(translateY(23%));
+    }
+
+}
+
+@media #{$large-up} {
+
+    .elements {
+//        @include transform(scale(1.5) translateY(24%)); // 16 pour debug normal
+        @include transform(translateY(24%)); // 16 pour debug normal
+    }
+    
+//    .element-bas-footer {
+//        @include transform(scale(0.75));
+//    }
+
+}
+
+.element-gauche,
+.element-droite {
+    position: relative;
+    width: 50%;
+    min-height: 350px;
+    margin-bottom: -60px;
+}
+
+.element-gauche { background: url('/images/svg/404/404-toile-gauche-01-01.svg') calc(100% - 26px) calc(100% - 50px) no-repeat; }
+.element-droite { background: url('/images/svg/404/404-toile-droite-01-01.svg') 14px 86px no-repeat; }
+
+/* L'image */
+.element-gauche img,
+.element-droite img {
+    position: absolute;
+}
+
+.element-gauche-image-1 {
+    bottom: 55px;
+    right: 51px;
+}
+
+.element-droite-image-1 {
+    bottom: 55px;
+    left: 103px;
+}
+
+.element-bas {
+    background: url('/images/svg/404/404-toile-sol-01-01.svg') top center no-repeat;
+    flex: 2;
+    min-height: rem-calc(160);
+}
+
+.title-absolute {
+    position: absolute;
+    top: 30px;
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+.title-absolute,
+.title-absolute h1 { color: white; }
+
+.element-droite-spider {
+    min-height: 100px;
+    width: 50px;
+    background-image:
+        url('/images/svg/404/404-fil-bout-01-01.svg'),
+        url('/images/svg/404/404-fil-01-01.svg'),
+        url('/images/svg/404/404-spider-01-01.svg');
+    background-position:
+        top center,
+        center 7px,
+        center 56px;
+    background-repeat: no-repeat;
+}
+
+.element-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}

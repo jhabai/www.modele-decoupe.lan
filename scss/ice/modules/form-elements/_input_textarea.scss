@@ -1,0 +1,107 @@
+// Input/Textarea
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="file"] + label,
+input[type="checkbox"] + label::before,
+textarea {
+	@extend %input_textarea;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    position: relative;
+    left: $input-checkbox-margin-left;
+    height: auto;
+    opacity: 0;
+}
+
+
+
+// Input
+// - - - - - - - - - - - -
+
+input {
+	height: $input-height;
+	line-height: $input-line-height;
+	padding: $input-padding;
+}
+
+
+
+// Textarea
+// - - - - - - - - - - - -
+
+textarea {
+	min-height: $textarea-min-height;
+	padding: $textarea-padding;
+	resize: none;
+}
+
+
+
+// Checkbox, le style par défaut est celui des inputs classiques
+// - - - - - - - - - - - -
+
+input[type="radio"],
+input[type="checkbox"] {
+	@extend %input_radio_checkbox;
+}
+
+input[type="checkbox"] {
+
+	+ label {
+
+		&::before {
+			width: $checkbox-width;
+			height: $checkbox-height;
+			margin-right: $checkbox-margin-right;
+			margin-bottom: 0;
+		}
+
+		&::after {
+			content: $checkbox-icon;
+			top: 0; left: 0;
+			width: $checkbox-width;
+			height: $checkbox-height;
+			line-height: $checkbox-height;
+			font-size: $checkbox-font-size;
+			color: $checkbox-color;
+			text-align: center;
+		}
+
+	}
+}
+
+input[type="radio"] {
+
+	+ label {
+
+		&::before {
+			position: relative;
+			top: rem-calc(-2);
+			width: $radio-width;
+			height: $radio-height;
+			border-radius: 100%;
+			border: #{$radio-border-width} solid #{$radio-border-color};
+			margin-right: rem-calc(10);
+		}
+
+		&::after {
+			content: $radio-checked-icon;
+			top: $radio-checked-top;
+			left: $radio-checked-left;
+			width: $radio-checked-width;
+			height: $radio-checked-height;
+			background: $radio-checked-background;
+			border-radius: 100%;
+
+		}
+
+	}
+
+}

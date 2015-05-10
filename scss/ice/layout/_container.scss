@@ -1,0 +1,16 @@
+// Container
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+body,
+html,
+.off-canvas-wrap,
+.off-canvas-wrap .inner-wrap,
+.l-container {
+    height: 100%;
+    width: 100%;
+}
+
+.l-container {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}

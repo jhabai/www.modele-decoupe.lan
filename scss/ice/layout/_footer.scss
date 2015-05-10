@@ -1,0 +1,10 @@
+// Footer
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.l-footer {
+	
+	&.row {
+		@extend %padding-row;
+	}
+    
+}

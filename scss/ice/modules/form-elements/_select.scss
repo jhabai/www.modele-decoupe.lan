@@ -1,0 +1,44 @@
+
+// Select
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Select style default
+// - - - - - - - - - - - -
+
+.select {
+	border-color: $select-border-color;
+	position: relative;
+	overflow: hidden;
+	border-width: 1px;
+	border-style: solid;
+	margin-bottom: $input-margin-bottom;
+
+	&::after {
+		content: $select-icon;
+		font-size: rem-calc(14);
+		color: $select-icon-color;
+		position: absolute;
+		top: 0;
+		right: rem-calc(-3);
+		bottom: 0;
+		background: white;
+		font-family: icomoon;
+		text-align: center;
+		pointer-events: none;
+		@include transform(rotate(-90deg));
+		padding: rem-calc(10) rem-calc(16); 
+	}
+
+	select {
+		height: $select-height;
+		line-height: $select-height;
+		color: $body-font-color;
+		font: rem-calc(16) $body-font-family;
+		border: 0;
+		outline: 0;
+        margin-bottom: 0;
+		padding-left: rem-calc(5);
+		cursor: pointer;
+	}
+
+}

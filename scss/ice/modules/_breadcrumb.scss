@@ -1,0 +1,11 @@
+
+// Breadcrumb
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.breadcrumb {
+	@extend %list-inline;
+
+	> li {
+        background: red;
+    }
+}

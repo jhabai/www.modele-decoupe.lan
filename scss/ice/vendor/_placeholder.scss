@@ -1,0 +1,154 @@
+// Placeholder
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+// Style Input/Textarea
+// - - - - - - - - - - - -
+
+%input_textarea {
+	display: block;
+	width: 100%;
+	color: $input-color;
+	border: $input-border;
+	border-radius: $input-border-radius;
+	font-family: $body-font-family;
+	font-size: $paragraph-font-size;
+	margin-bottom: $input-margin-bottom;
+	padding: $input-padding;
+	box-shadow: $input-shadow;
+    tranition-duration: .4s;
+
+	&:focus {
+		box-shadow: $input-focus-shadow;
+		border-color: $input-focus-border;
+	}
+}
+
+
+// Style Checkbox/Radio
+// - - - - - - - - - - - -
+
+%input_radio_checkbox {
+
+    // On stylise les éléments ::before et ::after de notre label
+	// Pour rappel, l'élément ::before simulera la case "non cochée" et l'élément ::after viendra la cochée
+
+	+ label {
+		position: relative;
+		margin-bottom: $label-margin-bottom * 2;
+		cursor: pointer;
+        margin-left: $label-margin-left;
+
+		&::before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			background: white;
+		}
+
+		&::after {
+			position: absolute;
+			font-family: icomoon;
+			opacity: 0; // Par défaut, l'élément n'apparait pas
+			@include transform(scale(0)); // On prévois un effet "scale"
+            transition-duration: .2s;
+		}
+	}
+
+	// 1. Si l'input est coché
+	// 2. Alors on affiche l'élément ::after du label avec une petit transition
+
+	&:checked { // 1
+
+		+ label {
+
+			&::after {
+				opacity: 1; // 2
+				@include transform(scale(1)); // 2
+			}
+		}
+	}
+}
+
+
+// Liste en ligne
+// - - - - - - - - - - - -
+
+%list-inline {
+	> li {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: rem-calc(-4);
+	}
+}
+
+
+
+
+// Marges internes du contenu
+// Small et Medium
+// - - - - - - - - - - - -
+
+%padding-row {
+
+    @media #{$small-only} {
+        padding-left: $row-padding-small;
+        padding-right: $row-padding-small;
+    }
+
+	@media #{$medium-only} {
+		padding-left: $row-padding-medium;
+		padding-right: $row-padding-medium;
+	}
+
+}
+
+
+
+
+// Pour ajouter un élément en "full width"
+// 1. On commence par lui attribuer les marges internes avec %padding-row
+// 2. Puis on applique un margin négatif afin que le bloc utilise toute la largeur disponible
+
+%full-width {
+
+    @extend %padding-row; // 1
+
+    @media #{$small-only} {
+        margin-left: -($row-padding-small); // 2
+        margin-right: -($row-padding-small); // 2
+    }
+
+	@media #{$medium-only} {
+		margin-left: -($row-padding-medium); // 2
+		margin-right: -($row-padding-medium); // 2
+	}
+
+}
+
+
+
+// Alignement vertical
+// - - - - - - - - - - - -
+
+%vertical-center,
+.vertical-center {
+	position: relative;
+	top: 50%;
+	@include transform(translateY(-50%));
+}
+
+
+
+// Icon <span>
+// - - - - - - - - - - - -
+
+%span-link {
+
+	&:hover {
+		text-decoration: none;
+
+		> span { text-decoration: underline; }
+	}
+
+}

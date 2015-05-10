@@ -1,0 +1,35 @@
+// States
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Block
+// - - - - - - - - - - - -
+
+.is-hidden { display: none !important; } // .hide
+.is-block {	display: block !important; }
+.is-inline-block { display: inline-block !important; }
+.is-inline { display: inline !important; }
+.is-scrollable { overflow: auto !important; }
+
+
+
+// Visibilité
+// - - - - - - - - - - - -
+
+.is-visible { visibility: visible !important; }
+.is-invisible { visibility: hidden !important; }
+
+
+
+// Clear
+// - - - - - - - - - - - -
+
+.is-clear { clear: both !important; }
+
+
+
+// Text
+// - - - - - - - - - - - -
+
+.text-uppercase { text-transform: uppercase; }
+.text-lowercase { text-transform: lowercase; }
+.text-hide { font-size: 0; }
