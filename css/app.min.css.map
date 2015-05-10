@@ -1,6 +1,6 @@
 {
 	"version": 3,
-	"file": "app.css",
+	"file": "app.min.css",
 	"sources": [
 		"../app.scss",
 		"../_settings.scss",
