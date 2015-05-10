@@ -1,4 +1,4 @@
-                <footer class="l-footer row" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+                <footer class="l-footer row" role="contentinfo">
                     <div class="columns">
                         <h2>Footer</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi animi molestiae distinctio excepturi quidem minus nisi sunt dolorum quo cumque suscipit voluptates saepe id, vero eos quisquam itaque illum debitis.</p>

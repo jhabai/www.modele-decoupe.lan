@@ -1,0 +1,12 @@
+// Error
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+small.error {
+    display: none;
+    color: $alert-color;
+
+    // On affiche le message
+    .error & {
+        display: block;
+    }
+}

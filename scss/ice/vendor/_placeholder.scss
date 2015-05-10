@@ -33,13 +33,9 @@
 	// Pour rappel, l'élément ::before simulera la case "non cochée" et l'élément ::after viendra la cochée
 
 	+ label {
-		margin-bottom: $label-margin-bottom * 2;
-        margin-left: $label-margin-left;
 
 		&::before {
 			content: "";
-			display: inline-block;
-			vertical-align: middle;
 			background: white;
 		}
 
@@ -47,8 +43,8 @@
 			position: absolute;
 			font-family: icomoon;
 			opacity: 0; // Par défaut, l'élément n'apparait pas
-			@include transform(scale(0)); // On prévois un effet "scale"
             transition-duration: .2s;
+			@include transform(scale(0)); // On prévois un effet "scale"
 		}
 	}
 

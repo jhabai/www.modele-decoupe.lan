@@ -41,50 +41,50 @@
         }
     }
 
-    .grid-horizontal {
-        top: 0;
-        left: 0;
-        height: rem-calc(2000);
-        margin-bottom: rem-calc(-2000);
+//    .grid-horizontal {
+//        top: 0;
+//        left: 0;
+//        height: rem-calc(2000);
+//        margin-bottom: rem-calc(-2000);
 
-        @media #{$large-up} {
-            right: rem-calc(17);
-        }
-    }
+//        @media #{$large-up} {
+//            right: rem-calc(17);
+//        }
+//    }
 
-    .grid-horizontal > div { border-width: 0 0 1px 0; }
+//    .grid-horizontal > div { border-width: 0 0 1px 0; }
 
 
 
     // Les grilles horizontales
     // - - - - - - - - - - - -
 
-    .grid-8 > div {
-        height: rem-calc(8);
-        border-color: #d0d0d0;
-        border-style: dashed;
-    }
-
-    .grid-16 > div {
-        height: rem-calc(16);
-        border-color: #6dc5fd;
-        border-style: dashed;
-    }
-
-    .grid-32 > div {
-        height: rem-calc(32);
-        border-color: #ffabe0;
-        border-style: solid;
-    }
+//    .grid-8 > div {
+//        height: rem-calc(8);
+//        border-color: #d0d0d0;
+//        border-style: dashed;
+//    }
+//
+//    .grid-16 > div {
+//        height: rem-calc(16);
+//        border-color: #6dc5fd;
+//        border-style: dashed;
+//    }
+//
+//    .grid-32 > div {
+//        height: rem-calc(32);
+//        border-color: #ffabe0;
+//        border-style: solid;
+//    }
 
 
 
     // Les boutons
     // - - - - - - - - - - - -
 
-    .show-horizontal-grid-8,
-    .show-horizontal-grid-16,
-    .show-horizontal-grid-32,
+//    .show-horizontal-grid-8,
+//    .show-horizontal-grid-16,
+//    .show-horizontal-grid-32,
     .show-vertical-grid {
         position: fixed;
         right: rem-calc(25);
@@ -92,10 +92,10 @@
         z-index: 999;
     }
 
-    .show-horizontal-grid-8 { bottom: rem-calc(68); }
+//    .show-horizontal-grid-8 { bottom: rem-calc(68); }
 
-    .show-horizontal-grid-16 { bottom: rem-calc(125); }
-    .show-horizontal-grid-32 { bottom: rem-calc(182); }
+//    .show-horizontal-grid-16 { bottom: rem-calc(125); }
+//    .show-horizontal-grid-32 { bottom: rem-calc(182); }
 
     .show-vertical-grid { bottom: rem-calc(10); }
 

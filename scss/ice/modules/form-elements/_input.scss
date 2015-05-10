@@ -1,6 +1,5 @@
-// Input/Textarea
+// INPUT
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-
 
 input[type="text"],
 input[type="password"],
@@ -12,45 +11,28 @@ textarea {
 	@extend %input_textarea;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-    position: relative;
-    left: $input-checkbox-margin-left;
-    height: auto;
-    opacity: 0;
-}
-
-
-
-// Input
-// - - - - - - - - - - - -
-
-input {
+// On cible tous les inputs, excepté les types "radio" et "checkbox"
+input:not([type=checkbox]):not([type=radio]) {
 	height: $input-height;
 	line-height: $input-line-height;
 	padding: $input-padding;
 }
 
 
-
-// Textarea
+// Checkbox/Radio
 // - - - - - - - - - - - -
 
-textarea {
-	min-height: $textarea-min-height;
-	padding: $textarea-padding;
-	resize: none;
-}
-
-
-
-// Checkbox, le style par défaut est celui des inputs classiques
-// - - - - - - - - - - - -
-
-input[type="radio"],
-input[type="checkbox"] {
+input[type="checkbox"],
+input[type="radio"] {
+    display: block;
+    margin: 0 0 $input-checkbox-margin-bottom;
+    opacity: 0;
 	@extend %input_radio_checkbox;
 }
+
+
+// Checkbox
+// - - - - - - - - - - - -
 
 input[type="checkbox"] {
 
@@ -77,16 +59,18 @@ input[type="checkbox"] {
 	}
 }
 
+
+// Radio
+// - - - - - - - - - - - -
+
 input[type="radio"] {
 
 	+ label {
 
 		&::before {
-			position: relative;
-			top: rem-calc(-2);
 			width: $radio-width;
 			height: $radio-height;
-			border-radius: 100%;
+			border-radius: 50%;
 			border: #{$radio-border-width} solid #{$radio-border-color};
 			margin-right: rem-calc(10);
 		}

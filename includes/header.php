@@ -1,6 +1,7 @@
+<?php $urlCurrent = $_SERVER['PHP_SELF'] ?>
 <!doctype html>
-<!--[if IE 9]>    <html lang="fr" class="ie9"><![endif]-->
-<!--[if !IE]><!--><html lang="fr"><!--<![endif]-->
+<!--[if IE 9]>    <html lang="fr" class="ie9" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if !IE]><!--><html lang="fr" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,31 +21,27 @@
 
     <script src="/js/modernizr.min.js"></script>
 </head>
-<body itemscope itemtype="http://schema.org/WebPage">
+<body>
 
     <div class="off-canvas-wrap" data-offcanvas>
 
         <div class="inner-wrap">
 
             <!-- Off Canvas Menu -->
-            <aside class="left-off-canvas-menu l-navigation-mobile" role="navigation" aria-label="Navigation mobile">
-                <?php include('includes/navigation-mobile.php') ?>
-            </aside>
+            <?php include('includes/navigation-mobile.php') ?>
 
             <div class="header-sticky">
 
                 <!-- Header section -->
-                <header class="l-header row clearfix" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-                    
+                <header class="l-header row clearfix" role="banner">
+
                     <div class="columns small-1 hide-for-large-up">
                         <button class="left-off-canvas-toggle small-4">Menu</button>
                     </div>
 
                     <!-- Navigation principale -->
-                    <nav class="show-for-large-up right" role="navigation" aria-label="Navigation principale" itemscope itemtype="http://schema.org/SiteNavigationElement">
-                        <?php include('includes/navigation.php') ?>
-                    </nav>
-                    
+                    <?php include('includes/navigation.php') ?>
+
                 </header>
 
             </div>

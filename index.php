@@ -31,7 +31,7 @@
                 <?php endif; ?>
 
                 <!-- Ajouter role="search" pour les formulaires de recherche -->
-                <form action="" method="post" class="row">
+                <form action="" method="post" class="row" data-abide>
                     <div class="columns">
                         <label for="">Un select</label>
                         <div class="select">
@@ -53,13 +53,15 @@
                     <div class="columns small-2">
                         <div>
                             <label for="" class="required">Un label</label>
-                            <input type="text" name="" id="" required placeholder="Un placeholder">
+                            <input type="text" name="" id="" placeholder="Un placeholder" required>
+                            <small class="error">Un champ obligatoire</small>
                         </div>
                     </div>
                     <div class="columns large-6">
                         <div>
-                            <input type="checkbox" name="" id="required" required>
+                            <input type="checkbox" name="" id="required" class="checkbox" required>
                             <label for="required">Une checkbox obligatoire</label>
+                            <small class="error">Un champ obligatoire</small>
                         </div>
                         <div>
                             <input type="checkbox" name="" id="checkbox">
