@@ -12,16 +12,25 @@
 
 
 
-// Icônes
-// - - - - - - - - - - - -
+// Font icônes
+// - - - - - - - - - - - - - - - - - - - - - - - - -
 
 [class^="icon-"],
 [class*=" icon-"] {
-	@extend %span-link;
+    @include flexbox;
 	font-variant: normal;
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
-	&::before { font-family: 'icomoon';	}
+	&:hover {
+		text-decoration: none;
+
+		> span { text-decoration: underline; }
+	}
+
+	&::before {
+        font-family: 'icomoon';
+        margin-right: rem-calc(10);
+    }
 }

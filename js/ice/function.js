@@ -1,4 +1,3 @@
-
 // Function
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -7,20 +6,19 @@
 
 // /!\ type text
 // Fonction qui change le format de sortie
+function numberFormatText($elem) {
+	var value  = id.text(),
+        result = value.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
 
-function number_format_text(id) {
-	var value  = id.text();
-	var result = value.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
+    $elem.text(result);
+};
 
-    id.text(result);
-}
 
 // /!\ type input
 // Changement du format sur une valeur
+function numberFormatValue($elem) {
+	var value  = id.val(),
+        result = value.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
 
-function number_format_value(id) {
-	var value  = id.val();
-	var result = value.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
-
-    id.val(result);
-}
+    $elem.val(result);
+};

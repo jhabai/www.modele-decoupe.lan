@@ -4,13 +4,12 @@
 
 function grid() {
 
-    var buttonVerticalGrid = Foundation.utils.S('#show-vertical-grid'),
-        gridVertical = Foundation.utils.S('#grid-vertical'),
-        content = Foundation.utils.S('#l-content');
+    var buttonVerticalGrid = Foundation.utils.S('#button-show-grid'),
+        gridVertical = Foundation.utils.S('#grid');
 
     buttonVerticalGrid.click(function() {
 
-        gridVertical.toggleClass('hide');
+        gridVertical.toggleClass(hideClass);
 
     });
 };

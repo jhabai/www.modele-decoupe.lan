@@ -1,6 +1,6 @@
-<button type="button" class="right show-vertical-grid" id="show-vertical-grid">V</button>
+<button type="button" class="right button-show-grid" id="button-show-grid">V</button>
 
-<div class="row hide" id="grid-vertical">
+<div class="row is-hidden" id="grid">
     <div class="grid">
         <div class="columns small-1 medium-1 large-1"></div>
         <div class="columns small-1 medium-1 large-1"></div>

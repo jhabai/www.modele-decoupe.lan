@@ -44,17 +44,5 @@
     &-reverse {
         @include flex-reverse(row-reverse);
     }
-
-
-    // Smartphone only
-    // - - - - - - - - - - - -
-    
-    @media #{$small-only} {
-        
-        &-column-small-only {
-            @include flex-direction(column);
-        }
-        
-    }
     
 }

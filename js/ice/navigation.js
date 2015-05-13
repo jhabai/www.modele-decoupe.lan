@@ -1,8 +1,7 @@
-
 // Navigation
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-function show_submenu($nav) {
+function showSubMenu($nav) {
 
     $nav.on('click', function(event){
         
@@ -27,7 +26,6 @@ function show_submenu($nav) {
         }
         
         // On detect si le label possède la classe 'active'
-        // On detect si le label possède la classe 'active'
 
         if (Foundation.utils.S(this).hasClass('active')) {
             Foundation.utils.S(this).removeClass('active'); 
@@ -40,7 +38,7 @@ function show_submenu($nav) {
 
     });
 
-}
+};
 
 
 
@@ -50,14 +48,14 @@ function show_submenu($nav) {
 
 function navigation() {
 
-    var navigation              = Foundation.utils.S('#l-navigation'),
-        navigation_mobile       = Foundation.utils.S('#l-navigation-mobile'),
-        navigation_mobile_label = Foundation.utils.S('#l-navigation-mobile > li > label');
+    var navigation = Foundation.utils.S('#l-navigation'),
+        navigationMobile = Foundation.utils.S('#l-navigation-mobile'),
+        navigationMobileLabel = Foundation.utils.S('#l-navigation-mobile > li > label');
+
 
     // Mobile
     // - - - - - - - - - - - -
-
-    show_submenu(navigation_mobile_label);
+    showSubMenu(navigationMobileLabel);
 
 
 

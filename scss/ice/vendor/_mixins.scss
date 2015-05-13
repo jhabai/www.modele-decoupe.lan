@@ -7,18 +7,10 @@
 // Usage : @include flebox(color .3s ease);
 // - - - - - - - - - - - -
 @mixin flexbox {
-    display: table;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    
-    // Compatibilité IE9
-    .ie9 & > * {
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: -4px
-    }
 }
 
 @mixin align-items($value) {
@@ -94,9 +86,9 @@
 @mixin rotate($deg) {
     @include transform(rotate(#{$deg}deg));
 }
- 
+
 @mixin scale($scale) {
-	@include transform(scale($scale));
+    @include transform(scale($scale));
 } 
 
 @mixin translate($x, $y) {
@@ -199,28 +191,6 @@
 
 
 
-// Placeholder
-// - - - - - - - - - - - -
-
-@mixin placeholder {
-    &::-webkit-input-placeholder { @content }
-    &::-moz-placeholder { @content }
-    &:-ms-input-placeholder { @content }
-}
-
-
-
-// Row center
-// - - - - - - - - - - - -
-
-@mixin row-center {
-    max-width: $row-width;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-
-
 // Column
 // - - - - - - - - - - - -
 
@@ -235,6 +205,7 @@
     -moz-column-gap: $value;
     column-gap: $value;
 }
+
 
 
 // Placeholder

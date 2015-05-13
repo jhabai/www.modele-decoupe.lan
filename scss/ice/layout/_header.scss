@@ -9,7 +9,8 @@
     z-index: 99;
 
 
-    // PC
+
+    // Desktop
     // - - - - - - - - - - - -
 
     @media #{$large-up} {
@@ -18,9 +19,9 @@
 }
 
 .l-header {
-    
+
 	&.row {
 		@extend %padding-row;
 	}
-    
+
 }

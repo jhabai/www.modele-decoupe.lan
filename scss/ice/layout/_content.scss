@@ -1,13 +1,10 @@
-/*------------------------------------*\
-    $CONTENT
-\*------------------------------------*/
-
-main { display: block; }
+// Content
+// - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .l-content {
-
-	&.row {
-		@extend %padding-row;
-	}
-	
+    display: block; // IE
+    
+    &.row {
+        @extend %padding-row;
+    }
 }

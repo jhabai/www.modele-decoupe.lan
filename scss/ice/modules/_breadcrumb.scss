@@ -3,9 +3,7 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .breadcrumb {
-	@extend %list-inline;
+    @include flexbox;
 
-	> li {
-        background: red;
-    }
+	> li {}
 }
