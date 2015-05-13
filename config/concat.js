@@ -20,7 +20,7 @@ module.exports = {
       'bower_components/foundation/js/foundation/foundation.tooltip.js',
       'bower_components/foundation/js/foundation/foundation.topbar.js',
       'bower_components/slick.js/slick/slick.min.js',
-      'js/ice/setting.js',
+      'js/_setting.js',
       'js/ice/function.js',
       'js/ice/navigation.js',
       'js/ice/colorbox.js',
