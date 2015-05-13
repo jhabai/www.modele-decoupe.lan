@@ -9,31 +9,29 @@ function showSubMenu($nav) {
             ul      = element.next('ul'),
             count   = ul.length;
 
+        // On ouvre notre sous-menu
         Foundation.utils.S('.submenu').slideUp('fast');
-        
-        // On detect si un sous-menu est ouvert
-        // Si il l'est et qu'un autre onglet est actif, alors on le ferme
 
+        // Si un autre sous-menu est ouvert
         if (count > 0 && !ul.is(':visible')) {
 
-            ul.slideDown();
+            // Alors on le ferme
+            ul.slideDown('fast');
             event.preventDefault();
-
-        } else {
-
-            ul.slideUp('fast');
-
-        }
-        
-        // On detect si le label possède la classe 'active'
-
-        if (Foundation.utils.S(this).hasClass('active')) {
-            Foundation.utils.S(this).removeClass('active'); 
         }
 
         else {
-            $nav.find('.active').removeClass('active');
-            Foundation.utils.S(this).addClass('active');
+            ul.slideUp('fast');
+        }
+
+        // On detect si le label possède la classe 'active'
+        if (Foundation.utils.S(this).hasClass(activeClass)) {
+            Foundation.utils.S(this).removeClass(activeClass);
+        }
+
+        else {
+            $nav.find(activeClass).removeClass(activeClass);
+            Foundation.utils.S(this).addClass(activeClass);
         }
 
     });
@@ -46,11 +44,7 @@ function showSubMenu($nav) {
 // Navigation
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-function navigation() {
-
-    var navigation = Foundation.utils.S('#l-navigation'),
-        navigationMobile = Foundation.utils.S('#l-navigation-mobile'),
-        navigationMobileLabel = Foundation.utils.S('#l-navigation-mobile > li > label');
+function mainNavigation() {
 
 
     // Mobile
@@ -72,7 +66,7 @@ function navigation() {
 
             navigation.find('.submenu').slideUp(); // 2
 
-        }
+        };
 
     });
     

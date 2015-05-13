@@ -1,0 +1,116 @@
+// Button
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$button-display: inline-block;
+$button-margin-bottom: rem-calc(20);
+$button-padding: rem-calc(10) rem-calc(5);
+$button-transition: background .4s, color .4s, border-color .4s, box-shadow .4s;
+
+// We use these to control button text styles.
+$button-font-color: $white;
+$button-font-color-hover: $white;
+$button-font-weight: $font-weight-normal;
+$button-font-size: rem-calc(16);
+$button-font-family: $body-font-family;
+$button-font-align: center;
+
+// We use these to control button border styles.
+$button-bg-color: $primary-color;
+$button-bg-hover: $secondary-color;
+$button-border-width: 0;
+$button-border-style: solid;
+$button-border-color: red;
+
+// We use this to set the default radius used throughout the core.
+$button-radius: $global-radius;
+
+// We use this to set default opacity and cursor for disabled buttons.
+$button-disabled-background: $secondary-color;
+$button-disabled-color: $black;
+$button-disabled-opacity: .7;
+$button-disabled-cursor: $cursor-default-value;
+
+// Cette mixin comporte 6 paramettres : 
+// background - Obligatoire
+// background (hover)
+// border-color
+// color - Obligatoire
+// border-radius
+
+@mixin button-style(
+    $background,
+    $color,
+    $border-color: false,
+    $box-shadow: false,
+    $background-hover: false,
+    $color-hover: false,
+    $border-color-hover: false,
+    $box-shadow-hover: false,
+    $radius: false) {
+
+        background: $background;
+
+        @if $border-color { border-color: $border-color; }
+        @if $radius { border-radius: $radius; }
+        @if $box-shadow { box-shadow: $box-shadow; }
+        
+        @if $color-hover == false {
+            &,
+            &:hover,
+            &:focus { color: $color; }
+        }
+        
+        @else { color: $color; }
+
+        &:hover,
+        &:focus {
+            @if $background-hover { background: $background-hover; }
+            @if $color-hover { color: $color-hover; }
+            @if $border-color-hover { border-color: $border-color-hover; }
+            @if $box-shadow-hover { box-shadow: $box-shadow-hover; }
+        }
+}
+
+button,
+.button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: $button-display;
+    font: $button-font-weight $button-font-size $button-font-family;
+    border-width: $button-border-width;
+    border-style: $button-border-style;
+    text-align: $button-font-align;
+    margin-bottom: $button-margin-bottom;
+    padding: $button-padding;
+    transition: $button-transition;
+    cursor: $cursor-pointer-value;
+    
+    @include button-style(
+        $background: $button-bg-color,
+        $color: $button-font-color,
+        $background-hover: $button-bg-hover
+    );
+
+    &.button-secondary {
+        @include button-style(
+            $background: $secondary-color,
+            $color: $black,
+            $background-hover: black,
+            $color-hover: white
+        );
+    }
+    
+    &.disabled,
+    &[disabled] {
+        background: $button-disabled-background;
+        color: $button-disabled-color;
+        opacity: $button-disabled-opacity;
+        cursor: $button-disabled-cursor;
+    }
+}
+
+// Firefox 2px fix
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}

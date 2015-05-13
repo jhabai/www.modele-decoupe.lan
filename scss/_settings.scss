@@ -83,6 +83,7 @@ $include-grid-debug: true;
 
 $include-html-grid-classes: $include-html-classes;
 $include-xl-html-grid-classes: false;
+$include-grid-debug: true;
 
 $row-width: rem-calc(1000);
 $total-small-columns: 4;
@@ -1006,8 +1007,8 @@ $select-border-radius: $global-radius;
 // $off-canvas-overlay-transition: background 300ms ease;
 // $off-canvas-overlay-cursor: pointer;
 // $off-canvas-overlay-box-shadow: -4px 0 4px rgba($black, .5), 4px 0 4px rgba($black, .5);
-// $off-canvas-overlay-background: rgba($white, .2);
-// $off-canvas-overlay-background-hover: rgba($white, .05);
+$off-canvas-overlay-background: rgba($white, .2);
+$off-canvas-overlay-background-hover: rgba($white, .5);
 
 // Transition Variables
 // $menu-slide: "transform 500ms ease";

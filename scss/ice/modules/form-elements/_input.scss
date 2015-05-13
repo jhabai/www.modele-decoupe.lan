@@ -8,7 +8,7 @@ input[type="tel"],
 input[type="file"] + label,
 input[type="checkbox"] + label::before,
 textarea {
-	@extend %input_textarea;
+	@extend %input-textarea;
 }
 
 // On cible tous les inputs, excepté les types "radio" et "checkbox"
@@ -27,7 +27,7 @@ input[type="radio"] {
     display: block;
     margin: 0 0 $input-checkbox-margin-bottom;
     opacity: 0;
-	@extend %input_radio_checkbox;
+	@extend %input-radio-checkbox;
 }
 
 

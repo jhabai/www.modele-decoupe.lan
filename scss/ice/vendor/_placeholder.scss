@@ -2,10 +2,10 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
-// Style Input/Textarea
+// Style des champs Input et Textarea
 // - - - - - - - - - - - -
 
-%input_textarea {
+%input-textarea {
 	display: block;
 	width: 100%;
 	color: $input-color;
@@ -27,29 +27,29 @@
 // Style Checkbox/Radio
 // - - - - - - - - - - - -
 
-%input_radio_checkbox {
+%input-radio-checkbox {
 
     // On stylise les éléments ::before et ::after de notre label
-	// Pour rappel, l'élément ::before simulera la case "non cochée" et l'élément ::after viendra la cochée
+	// Pour rappel, ::before simulera la case 'non cochée' et l'élément ::after viendra la cocher
 
 	+ label {
 
 		&::before {
-			content: "";
+            content: '';
 			background: white;
 		}
 
 		&::after {
 			position: absolute;
 			font-family: icomoon;
-			opacity: 0; // Par défaut, l'élément n'apparait pas
             transition-duration: .2s;
-			@include transform(scale(0)); // On prévois un effet "scale"
+			opacity: 0;
+			@include transform(scale(0)); // On prévois un effet 'scale'
 		}
 	}
 
 	// 1. Si l'input est coché
-	// 2. Alors on affiche l'élément ::after du label avec une petit transition
+	// 2. On affiche l'élément ::after avec une opacité et un scale par défaut
 
 	&:checked { // 1
 
@@ -64,23 +64,21 @@
 }
 
 
-// Liste en ligne
-// - - - - - - - - - - - -
-
-%list-inline {
-	> li {
-		display: inline-block;
-		vertical-align: middle;
-		margin-right: rem-calc(-4);
-	}
-}
 
 
+// Goutières internes de la balise d'un contenu principal
+// Appliquer généralement sur .row
+// Ex. :
 
+// .l-content {
+    // &.row {
+        // @extend %padding-row;
+    // }
+// }
 
-// Marges internes du contenu
-// Small et Medium
-// - - - - - - - - - - - -
+// <div class="l-content">
+    // ...
+// <div>
 
 %padding-row {
 
@@ -100,8 +98,18 @@
 
 
 // Pour ajouter un élément en "full width"
-// 1. On commence par lui attribuer les marges internes avec %padding-row
+// 1. On lui attribue les marges internes avec %padding-row
 // 2. Puis on applique un margin négatif afin que le bloc utilise toute la largeur disponible
+// Ex. :
+
+// <div class="box">
+    // <div class="columns small-2"></div>
+    // <div class="columns small-2"></div>
+// </div>
+
+// .box {
+    // @extend %full-width;
+// }
 
 %full-width {
 
@@ -116,16 +124,5 @@
 		margin-left: -($row-padding-medium); // 2
 		margin-right: -($row-padding-medium); // 2
 	}
-
-}
-
-
-
-// Icon <span>
-// - - - - - - - - - - - -
-
-%span-link {
-
-
 
 }

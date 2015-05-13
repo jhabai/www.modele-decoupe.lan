@@ -84,6 +84,9 @@
                     </div>
                     <div class="columns small-4 medium-4 large-3">
                         <button class="small-4">Envoyer</button>
+                        <a href="" class="small-4 button">Envoyer</a>
+                        <a href="" class="small-4 button button-secondary">Envoyer</a>
+                        <button class="small-4 disabled" disabled>Envoyer</button>
                     </div>
                 </form>
             </div>

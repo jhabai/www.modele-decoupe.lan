@@ -30,7 +30,7 @@ $(function() {
 
 	// Navigation
 	// - - - - - - - - - - - -
-	navigation();
+	mainNavigation();
 
 
 	// Grid
