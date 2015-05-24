@@ -1,14 +1,31 @@
 // INPUT
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
+@mixin input-style {
+	display: block;
+	width: 100%;
+	color: $input-color;
+    font: $paragraph-font-size $body-font-family;
+	border: $input-border;
+	border-radius: $input-border-radius;
+	box-shadow: $input-shadow;
+	margin-bottom: $input-margin-bottom;
+	padding: $input-padding;
+    transition-duration: .4s;
+
+	&:focus {
+		box-shadow: $input-focus-shadow;
+		border-color: $input-focus-border;
+	}
+}
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="tel"],
-input[type="file"] + label,
 input[type="checkbox"] + label::before,
 textarea {
-	@extend %input-textarea;
+	@include input-style;
 }
 
 // On cible tous les inputs, excepté les types "radio" et "checkbox"
@@ -19,15 +36,54 @@ input:not([type=checkbox]):not([type=radio]) {
 }
 
 
+
 // Checkbox/Radio
 // - - - - - - - - - - - -
+
+@mixin checkbox-radio-style {
+
+    // On stylise les éléments ::before et ::after de notre label
+	// Pour rappel, ::before simulera la case 'non cochée' et l'élément ::after viendra la cocher
+
+	+ label {
+
+		&::before {
+            content: '';
+			background: white;
+		}
+
+		&::after {
+			position: absolute;
+			font-family: icomoon;
+            transition-duration: .2s;
+			opacity: 0;
+			@include transform(scale(0)); // On prévois un effet 'scale'
+		}
+	}
+
+	// 1. Si l'input est coché
+	// 2. On affiche l'élément ::after avec une opacité et un scale par défaut
+
+	&:checked { // 1
+
+		+ label {
+
+			&::after {
+				opacity: 1; // 2
+				@include transform(scale(1)); // 2
+			}
+		}
+	}
+}
+
+// Le style par défaut
 
 input[type="checkbox"],
 input[type="radio"] {
     display: block;
     margin: 0 0 $input-checkbox-margin-bottom;
     opacity: 0;
-	@extend %input-radio-checkbox;
+	@include checkbox-radio-style;
 }
 
 

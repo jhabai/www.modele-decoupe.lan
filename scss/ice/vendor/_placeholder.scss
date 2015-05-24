@@ -1,71 +1,6 @@
 // Placeholder
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-
-// Style des champs Input et Textarea
-// - - - - - - - - - - - -
-
-%input-textarea {
-	display: block;
-	width: 100%;
-	color: $input-color;
-    font: $paragraph-font-size $body-font-family;
-	border: $input-border;
-	border-radius: $input-border-radius;
-	box-shadow: $input-shadow;
-	margin-bottom: $input-margin-bottom;
-	padding: $input-padding;
-    transition-duration: .4s;
-
-	&:focus {
-		box-shadow: $input-focus-shadow;
-		border-color: $input-focus-border;
-	}
-}
-
-
-// Style Checkbox/Radio
-// - - - - - - - - - - - -
-
-%input-radio-checkbox {
-
-    // On stylise les éléments ::before et ::after de notre label
-	// Pour rappel, ::before simulera la case 'non cochée' et l'élément ::after viendra la cocher
-
-	+ label {
-
-		&::before {
-            content: '';
-			background: white;
-		}
-
-		&::after {
-			position: absolute;
-			font-family: icomoon;
-            transition-duration: .2s;
-			opacity: 0;
-			@include transform(scale(0)); // On prévois un effet 'scale'
-		}
-	}
-
-	// 1. Si l'input est coché
-	// 2. On affiche l'élément ::after avec une opacité et un scale par défaut
-
-	&:checked { // 1
-
-		+ label {
-
-			&::after {
-				opacity: 1; // 2
-				@include transform(scale(1)); // 2
-			}
-		}
-	}
-}
-
-
-
-
 // Goutières internes de la balise d'un contenu principal
 // Appliquer généralement sur .row
 // Ex. :
@@ -111,6 +46,7 @@
     // @extend %full-width;
 // }
 
+.use-full-width,
 %full-width {
 
     @extend %padding-row; // 1

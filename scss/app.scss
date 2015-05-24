@@ -48,7 +48,7 @@
 
 	// Vendor
 	// - - - - - - - - - - - -
-    
+
   	"ice/vendor/function",
   	"ice/vendor/mixins",
   	"ice/vendor/placeholder",
@@ -67,7 +67,6 @@
 
 	// Modules
 	// - - - - - - - - - - - -
-  	"ice/modules/breadcrumb",
   	"ice/modules/carrousel",
   	"ice/modules/font-face",
   	"ice/modules/grid",
@@ -78,14 +77,9 @@
 	// Éléments de formulaire
 	// - - - - - - - - - - - -
 	"ice/modules/form-elements/buttons",
+	"ice/modules/form-elements/checkbox-radio",
 	"ice/modules/form-elements/error",
 	"ice/modules/form-elements/input",
 	"ice/modules/form-elements/label",
 	"ice/modules/form-elements/select",
-	"ice/modules/form-elements/textarea",
-
-
-	// Templates
-	// - - - - - - - - - - - -
-	"ice/templates/erreur-404",
-	"ice/templates/erreur-500";
+	"ice/modules/form-elements/textarea";

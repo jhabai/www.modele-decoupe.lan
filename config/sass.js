@@ -4,7 +4,7 @@ module.exports = {
   },
   dist: {
     options: {
-      outputStyle: 'compressed',
+      outputStyle: 'expanded',
       sourceMap: true
     },
     files: {
