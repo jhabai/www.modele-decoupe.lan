@@ -1,4 +1,4 @@
-bower_components
+private/vendor
 node_modules
-images
+public/images
 /todo.txt
