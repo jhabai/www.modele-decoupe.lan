@@ -1,6 +1,6 @@
 module.exports = {
   options: {
-    includePaths: ['bower_components/foundation/scss']
+    includePaths: ['private/vendor/foundation/scss']
   },
   dist: {
     options: {
@@ -8,7 +8,7 @@ module.exports = {
       sourceMap: true
     },
     files: {
-      'css/app.min.css': 'scss/app.scss'
+      'public/css/app.min.css': 'private/scss/app.scss'
     }
   }
 };

@@ -1,13 +1,13 @@
 module.exports = {
   scripts: {
-    files: ['js/*.js', 'js/**/*.js'],
+    files: ['private/js/*.js', 'private/js/**/*.js'],
     tasks: ['concat', 'notify:concat'],
     options: {
       spawn: false
     }
   },
   sass: {
-    files: 'scss/**/**/*.scss',
+    files: 'private/scss/**/**/*.scss',
     tasks: ['sass', 'notify:sass']
   }
 };

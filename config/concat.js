@@ -1,32 +1,33 @@
 module.exports = {
-  dist: {
-    src: ['js/plugin/minwidth-relocate.min.js',
-      'js/ice/relocate.js',
-      'bower_components/jquery/dist/jquery.min.js',
-      'bower_components/foundation/js/foundation/foundation.js',
-      'bower_components/foundation/js/foundation/foundation.abide.js',
-      'bower_components/foundation/js/foundation/foundation.accordion.js',
-      'bower_components/foundation/js/foundation/foundation.alert.js',
-      'bower_components/foundation/js/foundation/foundation.clearing.js',
-      'bower_components/foundation/js/foundation/foundation.dropdown.js',
-      'bower_components/foundation/js/foundation/foundation.equalizer.js',
-      'bower_components/foundation/js/foundation/foundation.interchange.js',
-      'bower_components/foundation/js/foundation/foundation.joyride.js',
-      'bower_components/foundation/js/foundation/foundation.magellan.js',
-      'bower_components/foundation/js/foundation/foundation.offcanvas.js',
-      'bower_components/foundation/js/foundation/foundation.reveal.js',
-      'bower_components/foundation/js/foundation/foundation.slider.js',
-      'bower_components/foundation/js/foundation/foundation.tab.js',
-      'bower_components/foundation/js/foundation/foundation.tooltip.js',
-      'bower_components/foundation/js/foundation/foundation.topbar.js',
-      'bower_components/slick.js/slick/slick.min.js',
-      'js/_setting.js',
-      'js/ice/function.js',
-      'js/ice/navigation.js',
-      'js/ice/colorbox.js',
-      'js/ice/grid.js',
-      'js/app.js'
-    ],
-    dest: 'js/app.min.js'
-  }
+    dist: {
+        src: [
+            'private/js/plugin/minwidth-relocate.min.js',
+            'private/js/ice/relocate.js',
+            'private/vendor/jquery/dist/jquery.min.js',
+            'private/vendor/foundation/js/foundation/foundation.js',
+            'private/vendor/foundation/js/foundation/foundation.abide.js',
+            'private/vendor/foundation/js/foundation/foundation.accordion.js',
+            'private/vendor/foundation/js/foundation/foundation.alert.js',
+            'private/vendor/foundation/js/foundation/foundation.clearing.js',
+            'private/vendor/foundation/js/foundation/foundation.dropdown.js',
+            'private/vendor/foundation/js/foundation/foundation.equalizer.js',
+            'private/vendor/foundation/js/foundation/foundation.interchange.js',
+            'private/vendor/foundation/js/foundation/foundation.joyride.js',
+            'private/vendor/foundation/js/foundation/foundation.magellan.js',
+            'private/vendor/foundation/js/foundation/foundation.offcanvas.js',
+            'private/vendor/foundation/js/foundation/foundation.reveal.js',
+            'private/vendor/foundation/js/foundation/foundation.slider.js',
+            'private/vendor/foundation/js/foundation/foundation.tab.js',
+            'private/vendor/foundation/js/foundation/foundation.tooltip.js',
+            'private/vendor/foundation/js/foundation/foundation.topbar.js',
+            'private/vendor/slick.js/slick/slick.min.js',
+            'private/js/_setting.js',
+            'private/js/ice/function.js',
+            'private/js/ice/navigation.js',
+            'private/js/ice/colorbox.js',
+            'private/js/ice/grid.js',
+            'private/js/app.js'
+        ],
+        dest: 'public/js/app.min.js'
+    }
 };
