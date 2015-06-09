@@ -1,0 +1,60 @@
+// Flex Grid
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$columns-count: 12;
+$screen-sizes: small medium large;
+$breakpoints: 0 500px 1000px 1200px 1600px;
+
+.row {
+    max-width: $row-width;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.columns {
+    padding-right: $column-gutter/2;
+    padding-left: $column-gutter/2;
+    
+    &.collapse {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@for $i from 1 through length($screen-sizes) {
+
+    @media screen and (min-width: nth($breakpoints, $i)){
+
+        .#{nth($screen-sizes, $i)}-vertical { flex-direction:column; }
+        .#{nth($screen-sizes, $i)}-horizontal { flex-direction:row; }
+        .#{nth($screen-sizes, $i)}-hidden { display: none; }
+        .#{nth($screen-sizes, $i)}-auto   { display: block; flex: 1 }
+        .#{nth($screen-sizes, $i)}-shrink { display: block; flex: 0 1 auto }
+
+        @for $j from 1 through $columns-count {
+            .#{nth($screen-sizes, $i)}-#{$j} {
+                display: block;
+                flex: 0 1 calc( 100% / #{$columns-count} * #{$j} );
+            }
+        }
+    }
+
+}
+
+/* Block grid */
+.block-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+//.block-grid > * { flex: 1; }
+
+@for $i from 1 through length($screen-sizes) {
+    @media screen and (min-width: nth($breakpoints, $i)){
+        @for $j from 2 through 10 {
+            .block-grid.#{nth($screen-sizes, $i)}-up-to-#{$j} > * {
+                flex: 0 1 calc( 100% / #{$j} );
+            }
+        }
+    }
+}

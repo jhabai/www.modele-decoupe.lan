@@ -4,7 +4,7 @@
         
         <?php include('includes/grid.php') ?>
 
-        <main class="l-content row" id="l-content" role="main" itemprop="mainContentOfPage">
+        <main class="l-content row block-grid" id="l-content" role="main" itemprop="mainContentOfPage">
 
             <nav class="breadcrumb is-hidden" role="menubar" aria-label="breadcrumb">
                 <ul>
@@ -22,17 +22,17 @@
                 <p>Lorem ipsum dolor sit amet, consectetur <a href="" class="cb-iframe">adipisicing</a> elit. Aliquid tempore nihil eius fuga, ipsam quisquam omnis aspernatur consectetur? Velit aliquid rem maiores culpa, iste accusantium, modi. Impedit expedita, consequatur repellat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magni, necessitatibus ipsa ut. Libero quo accusantium tenetur eos impedit, harum ut tempora error, sed nostrum iure dolor ab, fugiat fugit.</p>
             </div>
 
-            <div class="columns large-8">
+            <div class="large-8">
 
-                <h2>Un formulaire</h2>
+                <h2 class="columns">Un formulaire</h2>
 
                 <?php if ($_POST): ?>
                     <p class="alert-box success">Message envoyé</p>
                 <?php endif; ?>
 
                 <!-- Ajouter role="search" pour les formulaires de recherche -->
-                <form action="" method="post" class="row" data-abide>
-                    <div class="columns">
+                <form action="" method="post" class="block-grid" data-abide>
+                    <div class="columns large-12">
                         <label for="">Un select</label>
                         <div class="select">
                             <select name="" id="">
@@ -44,13 +44,13 @@
                             </select>
                         </div>
                     </div>
-                    <div class="columns small-2">
+                    <div class="columns small-6">
                         <div>
                             <label for="">Un label</label>
                             <input type="text" name="" id="">
                         </div>
                     </div>
-                    <div class="columns small-2">
+                    <div class="columns small-6">
                         <div>
                             <label for="" class="required">Un label</label>
                             <input type="text" name="" id="" placeholder="Un placeholder" required>
@@ -78,15 +78,15 @@
                             <label for="radio-2">Radio 2</label>
                         </div>
                     </div>
-                    <div class="columns">
+                    <div class="columns large-12">
                         <label for="">Un textarea</label>
                         <textarea name="textarea" id=""></textarea>
                     </div>
-                    <div class="columns small-4 medium-4 large-3">
-                        <button class="small-4">Envoyer</button>
-                        <a href="" class="small-4 button">Envoyer</a>
-                        <a href="" class="small-4 button button-secondary">Envoyer</a>
-                        <button class="small-4 disabled" disabled>Envoyer</button>
+                    <div class="columns small-4 medium-4 large-4">
+                        <button class="full">Envoyer</button>
+                        <a href="" class="full button">Envoyer</a>
+                        <a href="" class="full button button-secondary">Envoyer</a>
+                        <button class="full disabled" disabled>Envoyer</button>
                     </div>
                 </form>
             </div>

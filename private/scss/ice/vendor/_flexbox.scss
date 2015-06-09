@@ -1,18 +1,5 @@
-.flex {
-    display: flex;
 
-    &-vertical-centered { align-items: center; }
-    &-justify-centered { justify-content: center; }
 
-    &-centered {
-        align-items: center;
-        justify-content: center;
-    }
-
-    &-wrap { flex-wrap: wrap; }
-
-    &-reverse { flex-direction: row-reverse; }
-
-    &-right { margin-left: auto; }
-    
-}
+.flex { display: flex; }
+.wrap { flex-wrap: wrap; }
+.reverse { flex-direction: row-reverse; }
