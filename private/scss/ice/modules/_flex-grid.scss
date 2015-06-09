@@ -1,26 +1,63 @@
-//// Flex Grid
-//// - - - - - - - - - - - - - - - - - - - - - - - - -
-//
+// Flex Grid
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
 //$columns-count: 12;
 //$screen-sizes: small medium large;
-//$breakpoints: 0 500px 1000px 1200px 1600px;
-//
-//.row {
-//    max-width: $row-width;
-//    margin-right: auto;
-//    margin-left: auto;
-//}
-//
-//.columns {
-//    padding-right: $column-gutter/2;
-//    padding-left: $column-gutter/2;
-//    
-//    &.collapse {
-//        padding-right: 0;
-//        padding-left: 0;
-//    }
-//}
-//
+//$breakpoints: 0 $small-breakpoint $medium-breakpoint $large-breakpoint;
+
+//$breakpoints: (
+//    small: rem-calc(0),
+//    medium: rem-calc(640),
+//    large: rem-calc(1200),
+//    xlarge: rem-calc(1440),
+//    xxlarge: rem-calc(1920),
+//);
+
+.row {
+    max-width: $row-width;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.columns {
+    padding-right: $column-gutter/2;
+    padding-left: $column-gutter/2;
+    
+    &.collapse {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@mixin flex-grid($size, $columns-count) {
+    
+    .#{$size}-vertical { flex-direction:column; }
+    .#{$size}-horizontal { flex-direction:row; }
+    .#{$size}-hidden { display: none; }
+    .#{$size}-auto   { display: block; flex: 1 }
+    .#{$size}-shrink { display: block; flex: 0 1 auto }
+
+    @for $j from 1 through $columns-count {
+        .#{$size}-#{$j} {
+            display: block;
+            flex: 0 1 calc( 100% / #{$columns-count} * #{$j} );
+        }
+    }
+
+}
+
+@media #{$small-up} {
+    @include flex-grid($size: small, $columns-count: $total-small-columns);
+}
+
+@media #{$medium-up} {
+    @include flex-grid($size: medium, $columns-count: $total-medium-columns);
+}
+
+@media #{$large-up} {
+    @include flex-grid($size: large, $columns-count: $total-large-columns);
+}
+
 //@for $i from 1 through length($screen-sizes) {
 //
 //    @media screen and (min-width: nth($breakpoints, $i)){
@@ -40,15 +77,15 @@
 //    }
 //
 //}
-//
-///* Block grid */
-//.block-grid {
-//    display: flex;
-//    flex-wrap: wrap;
-//}
-//
-////.block-grid > * { flex: 1; }
-//
+
+/* Block grid */
+.block-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+//.block-grid > * { flex: 1; }
+
 //@for $i from 1 through length($screen-sizes) {
 //    @media screen and (min-width: nth($breakpoints, $i)){
 //        @for $j from 2 through 10 {
