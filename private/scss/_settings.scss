@@ -101,8 +101,8 @@ $row-padding-medium: rem-calc(44);
 // c. Global
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-$img-folder: "/images/";
-$css-folder: "/css/";
+$img-folder: "/bundles/icefrontend/images";
+$css-folder: "/bundles/icefrontend/css";
 
 // We use these to define default font stacks
 // $font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -140,6 +140,7 @@ $alert-color     : #f04124;
 $success-color   : #43AC6A;
 $warning-color   : #f08a24;
 $info-color      : #a0d3e8;
+$border-color    : $white-smoke;
 
 // We use these to control various global styles
 $body-bg: #fff;

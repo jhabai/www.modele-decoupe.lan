@@ -1,0 +1,57 @@
+// Credits
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+#credits {
+    background: white url('#{$img-folder}/background/bg-ice-dev.svg') -5px bottom no-repeat;
+    background-size: 196px 245px;
+    
+    [class^="icon-"]::before {
+        margin-right: 0;
+    }
+    
+    a {
+        &,
+        &:hover,
+        &:focus {
+            color: $primary-color;
+        }
+    }
+    
+    .credits-ice-dev {
+        border-width: 1px 0;
+        border-style: solid;
+        border-color: $border-color;
+        margin-top: rem-calc(15);
+
+        > li {
+            line-height: rem-calc(40);
+            font-weight: bold;
+
+            + li { border-top: 1px solid $border-color; }
+        }
+        
+        @media #{$medium-up} {
+            margin-top: rem-calc(22);
+        }
+    }
+    
+    .credits-logo {
+        @media #{$medium-up} {
+            display: block;
+            line-height: rem-calc(160);
+            margin-top: rem-calc(15);
+        }
+    }
+    
+    .icon-responsive-2 {
+        flex-direction: column;
+        font-family: 'Roboto';
+        
+        &::before { font-size: rem-calc(28); }
+        
+        @media #{$medium-up} {
+            margin-bottom: rem-calc(25);
+        }
+    }
+    
+}
