@@ -3,6 +3,9 @@
 
 .l-content {
     display: block; // IE
+    max-width: $row-width;
+    margin-right: auto;
+    margin-left: auto;
     
     &.row {
         @extend %padding-row;

@@ -4,7 +4,9 @@
         
         <?php include('includes/grid.php') ?>
 
-        <main class="l-content row block-grid" id="l-content" role="main" itemprop="mainContentOfPage">
+        <main class="l-content" id="l-content" role="main" itemprop="mainContentOfPage">
+            
+            <div class="block-grid" style="display: flex;">
 
             <nav class="breadcrumb is-hidden" role="menubar" aria-label="breadcrumb">
                 <ul>
@@ -44,13 +46,13 @@
                             </select>
                         </div>
                     </div>
-                    <div class="columns small-6">
+                    <div class="columns small-4">
                         <div>
                             <label for="">Un label</label>
                             <input type="text" name="" id="">
                         </div>
                     </div>
-                    <div class="columns small-6">
+                    <div class="columns small-4">
                         <div>
                             <label for="" class="required">Un label</label>
                             <input type="text" name="" id="" placeholder="Un placeholder" required>
@@ -96,7 +98,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero totam ipsum nulla magni neque assumenda cupiditate accusantium aliquid cum quis molestiae animi eligendi illum, magnam aspernatur doloremque ducimus enim esse.</p>
             </aside>
 
-            <br>
+            </div>
 
         </main> <!-- end l-content -->
 
