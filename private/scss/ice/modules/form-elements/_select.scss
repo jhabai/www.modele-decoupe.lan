@@ -24,7 +24,7 @@
 		font: rem-calc(14) icomoon;
 		text-align: center;
 		padding: rem-calc(10) rem-calc(16); 
-		@include transform(rotate(-90deg));
+        transform: rotate(-90deg);
 		pointer-events: none;
 	}
 

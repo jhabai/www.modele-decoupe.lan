@@ -15,7 +15,7 @@
 	</div> <!-- end off-canvas-wrap -->
 
     <!-- javascript -->
-    <script src="/js/app.min.js"></script>
+    <script src="/public/js/app.min.js"></script>
 
 </body>
 </html>

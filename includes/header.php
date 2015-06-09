@@ -17,9 +17,10 @@
     <meta property="og:url" content="[URL de la page]">
 
     <link rel="canonical" href="[URL de la page]">
-    <link rel="stylesheet" href="/css/app.min.css">
+    <link rel="stylesheet" href="/public/css/app.min.css">
 
-    <script src="/js/modernizr.min.js"></script>
+    <script src="https://raw.githubusercontent.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
+    <script src="/public/js/modernizr.min.js"></script>
 </head>
 <body>
 

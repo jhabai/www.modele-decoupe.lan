@@ -18,7 +18,7 @@
 			font-family: icomoon;
             transition-duration: .2s;
 			opacity: 0;
-			@include transform(scale(0)); // On prévois un effet 'scale'
+            transform: scale(0); // On prévois un effet 'scale'
 		}
 	}
 
@@ -31,7 +31,7 @@
 
 			&::after {
 				opacity: 1; // 2
-				@include transform(scale(1)); // 2
+				transform: scale(1); // 2
 			}
 		}
 	}

@@ -4,9 +4,8 @@
 label,
 .label {
 	position: relative;
-    @include flexbox;
-    @include align-items(center);
-	// display: $label-display;
+    display: flex;
+    align-items: center;
 	color: $label-color;
 	font-style: $label-style;
 	margin-bottom: $label-margin-bottom;

@@ -6,7 +6,7 @@
 .slick-track { position: relative; }
 
 .slick-slider {
-    @include user-select(none);
+    user-select: none;
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent;
     -ms-touch-action: pan-y;
@@ -27,7 +27,7 @@
 }
 
 .slick-slider .slick-track {
-    @include transform(translate3d(0, 0, 0));
+    transform: translate3d(0, 0, 0);
 }
 
 .slick-track {
@@ -88,7 +88,7 @@
 .slick-slider { margin-bottom: rem-calc(30); }
 
 .slick-dots {
-    @extend .no-bullet;
+    list-style: none;
 
     // li {}
 

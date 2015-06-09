@@ -1,48 +1,18 @@
 .flex {
-    
-    &-container {
-        @include flexbox;
-    }
-    
-    &-start {
-        @include align-content(flex-start);
-    }
-    
-    &-end {
-        @include align-content(flex-end);
-    }
-    
-    &-vertical-centered {
-        @include align-items(center);
-    }
-    
-    &-justify-centered {
-        @include justify-content(center);
-    }
-    
+    display: flex;
+
+    &-vertical-centered { align-items: center; }
+    &-justify-centered { justify-content: center; }
+
     &-centered {
-        @include align-items(center);
-        @include justify-content(center);
+        align-items: center;
+        justify-content: center;
     }
-    
-    &-right {
-        @include justify-content(flex-end);
-    }
-    
-    &-left {
-        @include justify-content(flex-start);
-    }
-    
-    &-column {
-        @include flex-direction(column);
-    }
-    
-    &-wrap {
-        @include flex-wrap(wrap);
-    }
-    
-    &-reverse {
-        @include flex-reverse(row-reverse);
-    }
+
+    &-wrap { flex-wrap: wrap; }
+
+    &-reverse { flex-direction: row-reverse; }
+
+    &-right { margin-left: auto; }
     
 }

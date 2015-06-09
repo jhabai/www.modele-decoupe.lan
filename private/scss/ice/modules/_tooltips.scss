@@ -11,7 +11,7 @@
             visibility: hidden;
             opacity: 0;
             transition: .2s;
-            @include transform(translate($tooltip-transformX, $tooltip-transformY));
+            transform: translate($tooltip-transformX, $tooltip-transformY);
         }
 
         &::before {
@@ -42,7 +42,7 @@
             &::after {
                 visibility: visible;
                 opacity: 1;
-                @include transform(none);
+                transform: none;
             }
         }
 
