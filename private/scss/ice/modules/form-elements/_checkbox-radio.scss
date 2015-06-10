@@ -4,8 +4,7 @@
 @mixin checkbox-radio-style {
 
     // On stylise les éléments ::before et ::after de notre label
-	// Pour rappel, ::before simulera la case 'non cochée' et l'élément ::after viendra la cocher
-
+	// ::before simulera la case 'non cochée' et l'élément ::after viendra la cocher
 	+ label {
 
 		&::before {
@@ -24,7 +23,6 @@
 
 	// 1. Si l'input est coché
 	// 2. On affiche l'élément ::after avec une opacité et un scale par défaut
-
 	&:checked { // 1
 
 		+ label {

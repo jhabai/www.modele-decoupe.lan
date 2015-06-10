@@ -3,15 +3,14 @@
 
 @mixin input-style {
 	display: block;
-	width: 100%;
 	color: $input-color;
     font: $paragraph-font-size $body-font-family;
 	border: $input-border;
 	border-radius: $input-border-radius;
 	box-shadow: $input-shadow;
-	margin-bottom: $input-margin-bottom;
 	padding: $input-padding;
     transition-duration: .4s;
+    outline: none; // Chrome
 
 	&:focus {
 		box-shadow: $input-focus-shadow;
@@ -28,7 +27,14 @@ textarea {
 	@include input-style;
 }
 
-// On cible tous les inputs, excepté les types "radio" et "checkbox"
+// Cible tous les inputs, excepté les types "radio" et "checkbox" ainsi que les <textarea>
+input:not([type=checkbox]):not([type=radio]),
+textarea {
+    width: 100%;
+    margin-bottom: $input-margin-bottom;
+}
+
+// Cible tous les inputs, excepté les types "radio" et "checkbox"
 input:not([type=checkbox]):not([type=radio]) {
 	height: $input-height;
 	line-height: $input-line-height;

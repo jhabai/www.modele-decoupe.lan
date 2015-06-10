@@ -34,7 +34,7 @@
         
         // Tablet only
         // - - - - - - - - - - - -
-        
+
         @media #{$medium-only} {
             left: $row-padding-medium;
             right: $row-padding-medium;
@@ -43,7 +43,7 @@
     
         // Desktop
         // - - - - - - - - - - - -
-        
+
         @media #{$large-up} {
             right: 50%;
             margin-right: -(($row-width/2) - rem-calc(9));
@@ -55,7 +55,7 @@
 
     // Bouton show
     // - - - - - - - - - - - -
-    
+
     .button-show-grid {
         position: fixed;
         right: rem-calc(25);
