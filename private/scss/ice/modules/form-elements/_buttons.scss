@@ -67,7 +67,9 @@ button,
             $color-hover: white
         );
     }
-    
+
+    &.full { width: 100%; }
+
     &.disabled,
     &[disabled] {
         background: $button-disabled-background;

@@ -3,24 +3,38 @@
 
 // Block
 // - - - - - - - - - - - -
-.is-hidden { display: none !important; } // .hide
-.is-block {	display: block !important; }
-.is-inline-block { display: inline-block !important; }
-.is-inline { display: inline !important; }
-.is-scrollable { overflow: auto !important; }
+.is-hidden       { display: none; }
+.is-block        { display: block; }
+.is-inline-block { display: inline-block; }
+.is-inline       { display: inline; }
+.is-scrollable   { overflow: auto; }
 
 
 
 // Visibilité
 // - - - - - - - - - - - -
-.is-visible { visibility: visible !important; }
-.is-invisible { visibility: hidden !important; }
+.is-visible   { visibility: visible; }
+.is-invisible { visibility: hidden; }
+
+
+
+// Alignement
+// - - - - - - - - - - - -
+.align-start   { justify-content: flex-start; } // Container
+.align-end     { justify-content: flex-end; } // Container
+.align-center  { justify-content: center; } // Container
+
+.align-top     { align-items: flex-start; } // Container
+.align-bottom  { align-items: flex-end; } // Container
+// .align-center  { align-items: center; } // Container
+
+.align-right   { margin-left: auto; } // Item
 
 
 
 // Clear
 // - - - - - - - - - - - -
-.is-clear { clear: both !important; }
+.is-clear { clear: both; }
 
 
 
@@ -28,5 +42,5 @@
 // - - - - - - - - - - - -
 .text-uppercase { text-transform: uppercase; }
 .text-lowercase { text-transform: lowercase; }
-.text-hide { font-size: 0; }
-.underline { text-decoration: underline; }
+.text-hide      { font-size: 0; }
+.underline      { text-decoration: underline; }
