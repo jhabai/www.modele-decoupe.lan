@@ -1,7 +1,7 @@
 // INPUT
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-@mixin input-style {
+%input-style {
 	display: block;
 	color: $input-color;
     font: $paragraph-font-size $body-font-family;
@@ -18,16 +18,14 @@
 	}
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
+// Cible tous les inputs, excepté les types "radio" et "checkbox"
+input:not([type=checkbox]):not([type=radio]),
 input[type="checkbox"] + label::before,
 textarea {
-	@include input-style;
+	@extend %input-style;
 }
 
-// Cible tous les inputs, excepté les types "radio" et "checkbox" ainsi que les <textarea>
+// Cible tous les inputs, excepté les types "radio" et "checkbox"
 input:not([type=checkbox]):not([type=radio]),
 textarea {
     width: 100%;
