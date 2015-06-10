@@ -1,97 +1,143 @@
 // Flex Grid
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-//$columns-count: 12;
-//$screen-sizes: small medium large;
-//$breakpoints: 0 $small-breakpoint $medium-breakpoint $large-breakpoint;
-
-//$breakpoints: (
-//    small: rem-calc(0),
-//    medium: rem-calc(640),
-//    large: rem-calc(1200),
-//    xlarge: rem-calc(1440),
-//    xxlarge: rem-calc(1920),
-//);
-
 .row {
     max-width: $row-width;
     margin-right: auto;
     margin-left: auto;
 }
 
-.columns {
-    padding-right: $column-gutter/2;
-    padding-left: $column-gutter/2;
-    
-    &.collapse {
-        padding-right: 0;
-        padding-left: 0;
-    }
-}
-
-@mixin flex-grid($size, $columns-count) {
-    
-    .#{$size}-vertical { flex-direction:column; }
-    .#{$size}-horizontal { flex-direction:row; }
-    .#{$size}-hidden { display: none; }
-    .#{$size}-auto   { display: block; flex: 1 }
-    .#{$size}-shrink { display: block; flex: 0 1 auto }
-
-    @for $j from 1 through $columns-count {
-        .#{$size}-#{$j} {
-            display: block;
-            flex: 0 1 calc( 100% / #{$columns-count} * #{$j} );
-        }
-    }
-
-}
-
-@media #{$small-up} {
-    @include flex-grid($size: small, $columns-count: $total-small-columns);
-}
-
-@media #{$medium-up} {
-    @include flex-grid($size: medium, $columns-count: $total-medium-columns);
-}
-
-@media #{$large-up} {
-    @include flex-grid($size: large, $columns-count: $total-large-columns);
-}
-
-//@for $i from 1 through length($screen-sizes) {
-//
-//    @media screen and (min-width: nth($breakpoints, $i)){
-//
-//        .#{nth($screen-sizes, $i)}-vertical { flex-direction:column; }
-//        .#{nth($screen-sizes, $i)}-horizontal { flex-direction:row; }
-//        .#{nth($screen-sizes, $i)}-hidden { display: none; }
-//        .#{nth($screen-sizes, $i)}-auto   { display: block; flex: 1 }
-//        .#{nth($screen-sizes, $i)}-shrink { display: block; flex: 0 1 auto }
-//
-//        @for $j from 1 through $columns-count {
-//            .#{nth($screen-sizes, $i)}-#{$j} {
-//                display: block;
-//                flex: 0 1 calc( 100% / #{$columns-count} * #{$j} );
-//            }
-//        }
-//    }
-//
-//}
-
-/* Block grid */
 .block-grid {
     display: flex;
     flex-wrap: wrap;
 }
 
-//.block-grid > * { flex: 1; }
+.columns,
+.column {
+    padding-right: $column-gutter/2;
+    padding-left: $column-gutter/2;
+}
 
-//@for $i from 1 through length($screen-sizes) {
-//    @media screen and (min-width: nth($breakpoints, $i)){
-//        @for $j from 2 through 10 {
-//            .block-grid.#{nth($screen-sizes, $i)}-up-to-#{$j} > * {
-//                flex: 0 1 calc( 100% / #{$j} );
-//            }
-//        }
-//    }
-//}
+
+
+// @FUNCTION
+// $colNumber - Found in settings file
+// $totalColumns - Found in settings file
+@function grid-calc($colNumber, $totalColumns) {
+    $result: percentage(($colNumber / $totalColumns));
+    @if $result == 0% { $result: 0; }
+    @return $result;
+}
+
+
+
+// Grid
+// - - - - - - - - - - - -
+@mixin flex-grid($size, $total-columns) {
+
+    // Les classes d'état
+    // - - - - - - - - - - - -
+    [class^="#{$size}-"],
+    [class*=" #{$size}-"] { position: relative; display: block; }
+    .#{$size}-vertical    { flex-direction:column; }
+    .#{$size}-horizontal  { flex-direction:row; }
+    .#{$size}-hidden      { display: none; }
+    .#{$size}-auto        { display: block; flex: 1 }
+    .#{$size}-shrink      { display: block; flex: 0 1 auto }
+
+
+    
+    // Columns
+    // - - - - - - - - - - - -
+    .columns,
+    .column {
+
+        // Centered
+        &.#{$size}-centered {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        // Uncentered
+        &.#{$size}-uncentered {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        // Collapse
+        &.#{$size}-collapse {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        // Uncollapse
+        &.#{$size}-uncollapse {
+            padding-right: $column-gutter/2;
+            padding-left: $column-gutter/2;
+        }
+
+    }
+
+
+
+    // Les classes Size
+    // - - - - - - - - - - - -
+    @for $j from 1 through $total-columns {
+        .#{$size}-#{$j} {
+            flex: 0 1 calc( 100% / #{$total-columns} * #{$j} );
+        }
+    }
+
+
+
+    // Push/Pull
+    // - - - - - - - - - - - -
+    @for $i from 0 through $total-columns - 1 {
+        .#{$size}-push-#{$i} {
+            #{$default-float}: grid-calc($i, $total-columns);
+            #{$opposite-direction}: auto;
+        }
+        .#{$size}-pull-#{$i} {
+            #{$opposite-direction}: grid-calc($i, $total-columns);
+            #{$default-float}: auto;
+        }
+    }
+
+
+    // Offset
+    // - - - - - - - - - - - -
+    @for $i from 0 through $total-columns - 1 {
+        .#{$size}-offset-#{$i} {
+            margin-#{$default-float}: grid-calc($i, $total-columns) !important;
+        }
+    }
+
+}
+
+// Smartphone
+@media #{$small-up} {
+    @include flex-grid($size: small, $total-columns: $total-small-columns);
+}
+
+// Tablette
+@media #{$medium-up} {
+    @include flex-grid($size: medium, $total-columns: $total-medium-columns);
+}
+
+// Desktop
+@media #{$large-up} {
+    @include flex-grid($size: large, $total-columns: $total-large-columns);
+}
+
+// If xl/xxl screen
+@if $include-xl-html-grid-classes {
+
+    @media #{$xlarge-up} {
+        @include flex-grid($size: xlarge, $total-columns: $total-large-columns);
+    }
+
+    @media #{$xxlarge-up} {
+        @include flex-grid($size: xxlarge, $total-columns: $total-large-columns);
+    }
+
+}
