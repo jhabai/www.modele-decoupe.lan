@@ -84,7 +84,8 @@
     // - - - - - - - - - - - -
     @for $j from 1 through $total-columns {
         .#{$size}-#{$j} {
-            flex: 0 1 calc( 100% / #{$total-columns} * #{$j} );
+            // flex: 0 1 calc( 100% / #{$total-columns} * #{$j} );
+            width: grid-calc($j, $total-columns);
         }
     }
 

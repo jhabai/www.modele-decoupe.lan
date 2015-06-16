@@ -1736,13 +1736,13 @@ body, html, .off-canvas-wrap, .off-canvas-wrap .inner-wrap, .l-container {
     padding-right: 0.75rem;
     padding-left: 0.75rem; }
   .small-1 {
-    flex: 0 1 calc( 100% / 4 * 1); }
+    width: 25%; }
   .small-2 {
-    flex: 0 1 calc( 100% / 4 * 2); }
+    width: 50%; }
   .small-3 {
-    flex: 0 1 calc( 100% / 4 * 3); }
+    width: 75%; }
   .small-4 {
-    flex: 0 1 calc( 100% / 4 * 4); }
+    width: 100%; }
   .small-push-0 {
     left: 0;
     right: auto; }
@@ -1805,21 +1805,21 @@ body, html, .off-canvas-wrap, .off-canvas-wrap .inner-wrap, .l-container {
     padding-right: 0.75rem;
     padding-left: 0.75rem; }
   .medium-1 {
-    flex: 0 1 calc( 100% / 8 * 1); }
+    width: 12.5%; }
   .medium-2 {
-    flex: 0 1 calc( 100% / 8 * 2); }
+    width: 25%; }
   .medium-3 {
-    flex: 0 1 calc( 100% / 8 * 3); }
+    width: 37.5%; }
   .medium-4 {
-    flex: 0 1 calc( 100% / 8 * 4); }
+    width: 50%; }
   .medium-5 {
-    flex: 0 1 calc( 100% / 8 * 5); }
+    width: 62.5%; }
   .medium-6 {
-    flex: 0 1 calc( 100% / 8 * 6); }
+    width: 75%; }
   .medium-7 {
-    flex: 0 1 calc( 100% / 8 * 7); }
+    width: 87.5%; }
   .medium-8 {
-    flex: 0 1 calc( 100% / 8 * 8); }
+    width: 100%; }
   .medium-push-0 {
     left: 0;
     right: auto; }
@@ -1914,29 +1914,29 @@ body, html, .off-canvas-wrap, .off-canvas-wrap .inner-wrap, .l-container {
     padding-right: 0.75rem;
     padding-left: 0.75rem; }
   .large-1 {
-    flex: 0 1 calc( 100% / 12 * 1); }
+    width: 8.3333333333%; }
   .large-2 {
-    flex: 0 1 calc( 100% / 12 * 2); }
+    width: 16.6666666667%; }
   .large-3 {
-    flex: 0 1 calc( 100% / 12 * 3); }
+    width: 25%; }
   .large-4 {
-    flex: 0 1 calc( 100% / 12 * 4); }
+    width: 33.3333333333%; }
   .large-5 {
-    flex: 0 1 calc( 100% / 12 * 5); }
+    width: 41.6666666667%; }
   .large-6 {
-    flex: 0 1 calc( 100% / 12 * 6); }
+    width: 50%; }
   .large-7 {
-    flex: 0 1 calc( 100% / 12 * 7); }
+    width: 58.3333333333%; }
   .large-8 {
-    flex: 0 1 calc( 100% / 12 * 8); }
+    width: 66.6666666667%; }
   .large-9 {
-    flex: 0 1 calc( 100% / 12 * 9); }
+    width: 75%; }
   .large-10 {
-    flex: 0 1 calc( 100% / 12 * 10); }
+    width: 83.3333333333%; }
   .large-11 {
-    flex: 0 1 calc( 100% / 12 * 11); }
+    width: 91.6666666667%; }
   .large-12 {
-    flex: 0 1 calc( 100% / 12 * 12); }
+    width: 100%; }
   .large-push-0 {
     left: 0;
     right: auto; }
