@@ -2146,6 +2146,17 @@ body, html, .off-canvas-wrap, .off-canvas-wrap .inner-wrap, .l-container {
 .underline {
   text-decoration: underline; }
 
+.show-submenu:checked + ul > li {
+  height: 3rem;
+  opacity: 1; }
+
+.submenu > li {
+  overflow: hidden;
+  height: 0;
+  padding: 0;
+  transition: .4s;
+  opacity: 0; }
+
 @media only screen and (min-width:64.0625em) {
   [data-tooltip]::before, [data-tooltip]::after {
     position: absolute;

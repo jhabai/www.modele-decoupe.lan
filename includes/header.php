@@ -24,7 +24,7 @@
 </head>
 <body>
 
-    <div class="off-canvas-wrap" data-offcanvas>
+    <div class="off-canvas-wrap move-right" data-offcanvas>
 
         <div class="inner-wrap">
 

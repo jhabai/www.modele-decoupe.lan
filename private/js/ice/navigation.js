@@ -49,7 +49,7 @@ function mainNavigation() {
 
     // Mobile
     // - - - - - - - - - - - -
-    showSubMenu(navigationMobileLabel);
+//    showSubMenu(navigationMobileLabel);
 
 
 
