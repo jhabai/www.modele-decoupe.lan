@@ -1,3 +1,5 @@
+                </main> <!-- end l-content -->
+
                 <footer class="l-footer row" role="contentinfo">
                     <div class="columns">
                         <h2>Footer</h2>
@@ -8,7 +10,8 @@
 			</div> <!-- end l-container -->
 
 			<!-- close the off-canvas menu -->
-			<a class="exit-off-canvas" role="button"></a>
+<!--			<a class="exit-off-canvas" role="button"></a>-->
+			<label for="left-off-canvas-toggle" class="exit-off-canvas" role="button"></label>
 
 		</div> <!-- end inner-wrap -->
 

@@ -1031,7 +1031,7 @@ ul.off-canvas-list {
   cursor: pointer;
   transition: background 300ms ease;
   -webkit-tap-highlight-color: transparent;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.8);
   bottom: 0;
   display: block;
   left: 0;
@@ -1041,7 +1041,7 @@ ul.off-canvas-list {
   z-index: 1002; }
   @media only screen and (min-width:40.0625em) {
     .move-right .exit-off-canvas:hover {
-      background: rgba(255, 255, 255, 0.5); } }
+      background: rgba(0, 0, 0, 0.8); } }
 
 .move-left > .inner-wrap {
   -webkit-transform: translate3d(-15.625rem, 0, 0);
@@ -1056,7 +1056,7 @@ ul.off-canvas-list {
   cursor: pointer;
   transition: background 300ms ease;
   -webkit-tap-highlight-color: transparent;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.8);
   bottom: 0;
   display: block;
   left: 0;
@@ -1066,7 +1066,7 @@ ul.off-canvas-list {
   z-index: 1002; }
   @media only screen and (min-width:40.0625em) {
     .move-left .exit-off-canvas:hover {
-      background: rgba(255, 255, 255, 0.5); } }
+      background: rgba(0, 0, 0, 0.8); } }
 
 .offcanvas-overlap .left-off-canvas-menu, .offcanvas-overlap .right-off-canvas-menu {
   -ms-transform: none;
@@ -1081,7 +1081,7 @@ ul.off-canvas-list {
   cursor: pointer;
   transition: background 300ms ease;
   -webkit-tap-highlight-color: transparent;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.8);
   bottom: 0;
   display: block;
   left: 0;
@@ -1091,7 +1091,7 @@ ul.off-canvas-list {
   z-index: 1002; }
   @media only screen and (min-width:40.0625em) {
     .offcanvas-overlap .exit-off-canvas:hover {
-      background: rgba(255, 255, 255, 0.5); } }
+      background: rgba(0, 0, 0, 0.8); } }
 
 .offcanvas-overlap-left .right-off-canvas-menu {
   -ms-transform: none;
@@ -1106,7 +1106,7 @@ ul.off-canvas-list {
   cursor: pointer;
   transition: background 300ms ease;
   -webkit-tap-highlight-color: transparent;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.8);
   bottom: 0;
   display: block;
   left: 0;
@@ -1116,7 +1116,7 @@ ul.off-canvas-list {
   z-index: 1002; }
   @media only screen and (min-width:40.0625em) {
     .offcanvas-overlap-left .exit-off-canvas:hover {
-      background: rgba(255, 255, 255, 0.5); } }
+      background: rgba(0, 0, 0, 0.8); } }
 
 .offcanvas-overlap-right .left-off-canvas-menu {
   -ms-transform: none;
@@ -1131,7 +1131,7 @@ ul.off-canvas-list {
   cursor: pointer;
   transition: background 300ms ease;
   -webkit-tap-highlight-color: transparent;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.8);
   bottom: 0;
   display: block;
   left: 0;
@@ -1141,7 +1141,7 @@ ul.off-canvas-list {
   z-index: 1002; }
   @media only screen and (min-width:40.0625em) {
     .offcanvas-overlap-right .exit-off-canvas:hover {
-      background: rgba(255, 255, 255, 0.5); } }
+      background: rgba(0, 0, 0, 0.8); } }
 
 .no-csstransforms .left-off-canvas-menu {
   left: -15.625rem; }
@@ -1579,6 +1579,22 @@ th.hide-for-touch {
   .use-full-width {
     margin-left: -2.75rem;
     margin-right: -2.75rem; } }
+
+.left-off-canvas-toggle:checked ~ .off-canvas-wrap > .inner-wrap {
+  transform: translate3d(15.625rem, 0, 0); }
+  .left-off-canvas-toggle:checked ~ .off-canvas-wrap > .inner-wrap .exit-off-canvas {
+    box-shadow: -4px 0 4px rgba(0, 0, 0, 0.5), 4px 0 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background 300ms ease;
+    -webkit-tap-highlight-color: transparent;
+    background: rgba(0, 0, 0, 0.8);
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1002; }
 
 .l-navigation-mobile {
   max-height: 100vh; }

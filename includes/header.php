@@ -24,7 +24,9 @@
 </head>
 <body>
 
-    <div class="off-canvas-wrap move-right" data-offcanvas>
+    <input type="checkbox" id="left-off-canvas-toggle" class="left-off-canvas-toggle">
+
+    <div class="off-canvas-wrap" data-offcanvas>
 
         <div class="inner-wrap">
 
@@ -37,7 +39,7 @@
                 <header class="l-header row clearfix" role="banner">
 
                     <div class="columns small-1 hide-for-large-up">
-                        <button class="left-off-canvas-toggle small-4">Menu</button>
+                        <label for="left-off-canvas-toggle" class="button">Menu</label>
                     </div>
 
                     <!-- Navigation principale -->
@@ -46,3 +48,10 @@
                 </header>
 
             </div>
+
+            <!-- Contenu -->            
+            <div class="l-container" id="l-container">
+
+                <?php include('includes/grid.php') ?>
+
+                <main class="l-content row block-grid" id="l-content" role="main" itemprop="mainContentOfPage">
