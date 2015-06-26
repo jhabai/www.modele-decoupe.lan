@@ -1,0 +1,51 @@
+// Tooltip
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+[data-tooltip] {
+    
+    @media #{$large-up} {
+    
+        &::before,
+        &::after {
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            transition: .2s;
+            transform: translate($tooltip-transformX, $tooltip-transformY);
+        }
+
+        &::before {
+            content: attr(data-tooltip);
+            top: rem-calc(-33);
+            right: rem-calc(-5);
+            min-width: $tooltip-min-width;
+            background: $tooltip-bg;
+            font-size: $tooltip-font-size;
+            text-align: $tooltip-text-align;
+            color: $tooltip-font-color;
+            padding: $tooltip-padding;
+        }
+
+        &::after {
+            content: "";
+            top: rem-calc(-10);
+            right: rem-calc(6);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7px 7px 0 7px;
+            border-color: $tuatara transparent transparent transparent;
+        }
+
+        a:hover > & {
+            &::before,
+            &::after {
+                visibility: visible;
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+    }
+
+}

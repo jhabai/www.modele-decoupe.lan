@@ -2108,6 +2108,37 @@ body, html, .off-canvas-wrap, .off-canvas-wrap .inner-wrap, .l-container {
   margin-bottom: 0;
   z-index: 999; }
 
+@media only screen and (min-width:64.0625em) {
+  [data-tooltip]::before, [data-tooltip]::after {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s;
+    transform: translate(0, 7px); }
+  [data-tooltip]::before {
+    content: attr(data-tooltip);
+    top: -2.0625rem;
+    right: -0.3125rem;
+    min-width: 9.375rem;
+    background: #444444;
+    font-size: 0.875rem;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0.0625rem 0; }
+  [data-tooltip]::after {
+    content: "";
+    top: -0.625rem;
+    right: 0.375rem;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 7px 0 7px;
+    border-color: #444444 transparent transparent transparent; }
+  a:hover > [data-tooltip]::before, a:hover > [data-tooltip]::after {
+    visibility: visible;
+    opacity: 1;
+    transform: none; } }
+
 .is-hidden {
   display: none; }
 
