@@ -11,6 +11,12 @@ module.exports = {
             message: 'Compilé avec succès'
         }
     },
+    copy: {
+        options: {
+            title: 'Copy',
+            message: 'Copié avec succès'
+        }
+    },
     prod: {
         options: {
             title: 'Production',

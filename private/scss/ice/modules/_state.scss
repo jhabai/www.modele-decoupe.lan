@@ -24,9 +24,9 @@
 .align-end     { justify-content: flex-end; } // Container
 .align-center  { justify-content: center; } // Container
 
-.align-top     { align-items: flex-start; } // Container
-.align-bottom  { align-items: flex-end; } // Container
-// .align-center  { align-items: center; } // Container
+.align-top       { align-items: flex-start; } // Container
+.align-bottom    { align-items: flex-end; } // Container
+.vertical-center { align-items: center; } // Container
 
 .align-right   { margin-left: auto; } // Item
 

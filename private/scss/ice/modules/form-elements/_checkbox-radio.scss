@@ -35,8 +35,8 @@
 	}
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+.checkbox,
+.radio {
     display: block;
     margin: 0 0 $input-checkbox-margin-bottom;
     opacity: 0;
@@ -47,7 +47,7 @@ input[type="radio"] {
 // Checkbox
 // - - - - - - - - - - - -
 
-input[type="checkbox"] {
+.checkbox {
 
 	+ label {
 
@@ -76,7 +76,7 @@ input[type="checkbox"] {
 // Radio
 // - - - - - - - - - - - -
 
-input[type="radio"] {
+.radio {
 
 	+ label {
 

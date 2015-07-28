@@ -38,15 +38,15 @@
     // Les classes d'état
     // - - - - - - - - - - - -
     [class^="#{$size}-"],
-    [class*=" #{$size}-"] { position: relative; display: block; }
+    [class*=" #{$size}-"] { position: relative; }
     .#{$size}-vertical    { flex-direction:column; }
     .#{$size}-horizontal  { flex-direction:row; }
-    .#{$size}-hidden      { display: none; }
-    .#{$size}-auto        { display: block; flex: 1 }
-    .#{$size}-shrink      { display: block; flex: 0 1 auto }
+    //.#{$size}-hidden      { display: none; }
+    //.#{$size}-auto        { display: block; flex: 1 }
+    //.#{$size}-shrink      { display: block; flex: 0 1 auto }
 
 
-    
+
     // Columns
     // - - - - - - - - - - - -
     .columns,
@@ -84,7 +84,6 @@
     // - - - - - - - - - - - -
     @for $j from 1 through $total-columns {
         .#{$size}-#{$j} {
-            // flex: 0 1 calc( 100% / #{$total-columns} * #{$j} );
             width: grid-calc($j, $total-columns);
         }
     }
