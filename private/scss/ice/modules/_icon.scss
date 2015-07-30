@@ -1,51 +1,22 @@
-// Tooltip
+// Icônes
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-[data-tooltip] {
-    
-    @media #{$large-up} {
-    
-        &::before,
-        &::after {
-            position: absolute;
-            visibility: hidden;
-            opacity: 0;
-            transition: .2s;
-            transform: translate($tooltip-transformX, $tooltip-transformY);
-        }
+[class^="icon-"],
+[class*=" icon-"] {
+    display: flex;
+	font-variant: normal;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
-        &::before {
-            content: attr(data-tooltip);
-            top: rem-calc(-33);
-            right: rem-calc(-5);
-            min-width: $tooltip-min-width;
-            background: $tooltip-bg;
-            font-size: $tooltip-font-size;
-            text-align: $tooltip-text-align;
-            color: $tooltip-font-color;
-            padding: $tooltip-padding;
-        }
+	&:hover {
+		text-decoration: none;
 
-        &::after {
-            content: "";
-            top: rem-calc(-10);
-            right: rem-calc(6);
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 7px 7px 0 7px;
-            border-color: $tuatara transparent transparent transparent;
-        }
+		> span { text-decoration: underline; }
+	}
 
-        a:hover > & {
-            &::before,
-            &::after {
-                visibility: visible;
-                opacity: 1;
-                transform: none;
-            }
-        }
-
+	&::before {
+        font-family: 'icomoon';
+        margin-right: rem-calc(10);
     }
-
 }

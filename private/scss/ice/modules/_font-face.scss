@@ -2,35 +2,10 @@
 // Font-face
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-@font-face {
-	font-family: 'icomoon';
-	src:url('#{$css-folder}/fonts/icomoon.woff?bxgr62') format('woff'),
-		url('#{$css-folder}/fonts/icomoon.ttf?bxgr62') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-
-
-// Font icônes
-// - - - - - - - - - - - - - - - - - - - - - - - - -
-
-[class^="icon-"],
-[class*=" icon-"] {
-    display: flex;
-	font-variant: normal;
-	speak: none;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-
-	&:hover {
-		text-decoration: none;
-
-		> span { text-decoration: underline; }
-	}
-
-	&::before {
-        font-family: 'icomoon';
-        margin-right: rem-calc(10);
-    }
-}
+//@font-face {
+//	font-family: 'icomoon';
+//	src:url('#{$css-folder}/fonts/icomoon.woff?bxgr62') format('woff'),
+//		url('#{$css-folder}/fonts/icomoon.ttf?bxgr62') format('truetype');
+//	font-weight: normal;
+//	font-style: normal;
+//}

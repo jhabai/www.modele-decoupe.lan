@@ -19,7 +19,7 @@
     <link rel="canonical" href="[URL de la page]">
     <link rel="stylesheet" href="/public/css/app.min.css">
 
-    <script src="https://raw.githubusercontent.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
+    <script src="/public/js/prefixfree.min.js"></script>
     <script src="/public/js/modernizr.min.js"></script>
 </head>
 <body>
@@ -33,19 +33,19 @@
             <!-- Off Canvas Menu -->
             <?php include('includes/navigation-mobile.php') ?>
 
-            <div class="header-sticky">
+            <div id="header-sticky" class="header-sticky">
 
                 <!-- Header section -->
-                <header class="l-header row clearfix" role="banner">
+                <header class="l-header row" role="banner">
 
                     <div class="columns small-1 hide-for-large-up">
                         <label for="left-off-canvas-toggle" class="button">Menu</label>
                     </div>
 
-                    <!-- Navigation principale -->
-                    <?php include('includes/navigation.php') ?>
-
                 </header>
+
+                <!-- Navigation principale -->
+                <?php include('includes/navigation.php') ?>
 
             </div>
 

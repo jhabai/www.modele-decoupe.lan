@@ -19,16 +19,16 @@ var smallUp 	= window.matchMedia("(min-width: " + smallBreackPoints + "px)").mat
 // Variables globales
 // - - - - - - - - - - - -
 
-var header = Foundation.utils.S('#l-header'),
-    navigation = Foundation.utils.S('#l-navigation'),
-    navigationLabel = Foundation.utils.S('#l-navigation > li > label'),
-    subMenu = Foundation.utils.S('#l-submenu'),
-    navigationMobile = Foundation.utils.S('#l-navigation-mobile'),
-    navigationMobileLabel = Foundation.utils.S('#l-navigation-mobile > li > label'),
-    content = Foundation.utils.S('#l-content'),
-    container = Foundation.utils.S('#l-container'),
-    footer = Foundation.utils.S('#l-footer'),
-    offCanvasWrap = Foundation.utils.S('#off-canvas-wrap');
+var header = document.getElementById('header-sticky'),
+    navigation = document.getElementById('l-navigation'),
+    navigationLabel = document.getElementById('l-navigation > li > label'),
+    subMenu = document.getElementById('l-submenu'),
+    navigationMobile = document.getElementById('l-navigation-mobile'),
+    navigationMobileLabel = document.getElementById('l-navigation-mobile > li > label'),
+    content = document.getElementById('l-content'),
+    container = document.getElementById('l-container'),
+    footer = document.getElementById('l-footer'),
+    offCanvasWrap = document.getElementById('off-canvas-wrap');
 
 
 
@@ -37,3 +37,13 @@ var header = Foundation.utils.S('#l-header'),
 
 var hideClass = 'is-hidden',
     activeClass = 'active';
+
+
+
+// Navigateur
+// - - - - - - - - - - - -
+
+var isChrome = navigator.userAgent.indexOf('Chrome') > -1,
+    isExplorer = navigator.userAgent.indexOf('MSIE') > -1,
+    isFirefox = navigator.userAgent.indexOf('Firefox') > -1,
+    isSafari = navigator.userAgent.indexOf("Safari") > -1;

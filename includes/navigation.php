@@ -1,7 +1,10 @@
-<nav class="show-for-large-up right" role="navigation" aria-label="Navigation principale" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+<nav class="show-for-large-up row" aria-label="Navigation principale" role="navigation">
     <ul id="l-navigation" class="no-bullet l-navigation block-grid">
+        <meta itemprop="name" content="navigation_menu">
         <?php for ($item = 1; $item <= 5; $item++): ?>
-            <li itemprop="name"><a href="" itemprop="url">Item <?php echo $item ?></a></li>
+            <li class="l-navigation-item" itemtype="http://www.schema.org/SiteNavigationElement" itemscope itemprop="additionalType">
+                <a href="" itemprop="url"><span itemprop="name">Item <?php echo $item ?></span></a>
+            </li>
         <?php endfor; ?>
     </ul>
 </nav>

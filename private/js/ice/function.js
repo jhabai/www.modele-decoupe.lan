@@ -1,24 +1,40 @@
 // Function
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// Format du numéro
+// Déplacer un élément
 // - - - - - - - - - - - -
 
-// /!\ type text
-// Fonction qui change le format de sortie
-function numberFormatText($elem) {
-	var value  = id.text(),
-        result = value.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
+// Déplacer un élément ($el) dans un bloc ($elMoving)
+// * Ex. :
 
-    $elem.text(result);
+// minwidth(1025, function(){
+//     movingElement(elements, sidebar);
+// });
+
+function movingElement($el, $elMoving) {
+
+    for (var i = 0; i < $el.length; i++) {
+        $elMoving[i].appendChild($el[i]);
+    };
+
 };
 
 
-// /!\ type input
-// Changement du format sur une valeur
-function numberFormatValue($elem) {
-	var value  = id.val(),
-        result = value.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
 
-    $elem.val(result);
-};
+// hasClass, addClass, removeClass
+// - - - - - - - - - - - -
+
+function hasClass(ele,cls) {
+    return !!ele.className.match(new RegExp('(\\s|^)'+cls+'(\\s|$)'));
+}
+
+function addClass(ele,cls) {
+    if (!hasClass(ele,cls)) ele.className += " "+cls;
+}
+
+function removeClass(ele,cls) {
+    if (hasClass(ele,cls)) {
+        var reg = new RegExp('(\\s|^)'+cls+'(\\s|$)');
+        ele.className=ele.className.replace(reg,' ');
+    }
+}

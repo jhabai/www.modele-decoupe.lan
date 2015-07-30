@@ -11,7 +11,7 @@ module.exports = {
                 '*.php',
                 '*.json',
                 '*.js',
-                '.bowercc'
+                '.bowerrc'
             ],
             dest: 'V:/www.modele-decoupe.lan/str'
         },
