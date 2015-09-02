@@ -41,9 +41,6 @@
     [class*=" #{$size}-"] { position: relative; }
     .#{$size}-vertical    { flex-direction:column; }
     .#{$size}-horizontal  { flex-direction:row; }
-    //.#{$size}-hidden      { display: none; }
-    //.#{$size}-auto        { display: block; flex: 1 }
-    //.#{$size}-shrink      { display: block; flex: 0 1 auto }
 
 
 
@@ -119,7 +116,7 @@
     @include flex-grid($size: small, $total-columns: $total-small-columns);
 }
 
-// Tablette
+// Tablet
 @media #{$medium-up} {
     @include flex-grid($size: medium, $total-columns: $total-medium-columns);
 }

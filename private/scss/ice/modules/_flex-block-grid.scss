@@ -1,0 +1,52 @@
+// Flex Block Grid
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+[class*="block-grid-"] {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+
+
+// Block-Grid
+// - - - - - - - - - - - -
+@mixin flex-block-grid($size, $total-columns) {
+    @for $i from 1 through $total-columns {
+        .#{$size}-block-grid-#{($i)} > li {
+            width: 100%/$i;
+        }
+    }
+}
+
+
+
+// Smartphone
+@media #{$small-up} {
+    @include flex-block-grid($size: small, $total-columns: $block-grid-elements);
+}
+
+// Tablet
+@media #{$medium-up} {
+    @include flex-block-grid($size: medium, $total-columns: $block-grid-elements);
+}
+
+// Desktop
+@media #{$large-up} {
+    @include flex-block-grid($size: large, $total-columns: $block-grid-elements);
+}
+
+// If xl/xxl screen
+@if $include-xl-html-grid-classes {
+
+    @media #{$xlarge-up} {
+        @include flex-block-grid($size: xlarge, $total-columns: $block-grid-elements);
+    }
+
+    @media #{$xxlarge-up} {
+        @include flex-block-grid($size: xxlarge, $total-columns: $block-grid-elements);
+    }
+
+}

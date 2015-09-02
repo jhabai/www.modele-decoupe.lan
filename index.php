@@ -7,6 +7,14 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid tempore nihil eius fuga, ipsam quisquam omnis aspernatur consectetur? Velit aliquid rem maiores culpa, iste accusantium, modi. Impedit expedita, consequatur repellat!</p>
         <p>Lorem ipsum dolor sit amet, consectetur <a href="" class="cb-iframe">adipisicing</a> elit. Aliquid tempore nihil eius fuga, ipsam quisquam omnis aspernatur consectetur? Velit aliquid rem maiores culpa, iste accusantium, modi. Impedit expedita, consequatur repellat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magni, necessitatibus ipsa ut. Libero quo accusantium tenetur eos impedit, harum ut tempora error, sed nostrum iure dolor ab, fugiat fugit.</p>
     </section>
+    
+    <section class="small-4">
+        <ul class="small-block-grid-2 medium-block-grid-6 large-block-grid-4">
+            <?php for ($i = 1; $i <= 16; $i++): ?>
+                <li class="columns">Colonne <?php echo $i ?></li>
+            <?php endfor; ?>
+        </ul>
+    </section>
 
     <section class="large-8">
 

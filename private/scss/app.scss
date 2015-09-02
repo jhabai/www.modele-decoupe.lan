@@ -4,10 +4,10 @@
 @import 
     "settings",
 //	"foundation/grid",
-	"../vendor/foundation/scss/foundation/components/accordion",
+//	"../vendor/foundation/scss/foundation/components/accordion",
 	"../vendor/foundation/scss/foundation/components/alert-boxes",
-	"../vendor/foundation/scss/foundation/components/block-grid",
-	"../vendor/foundation/scss/foundation/components/breadcrumbs",
+//	"../vendor/foundation/scss/foundation/components/block-grid",
+//	"../vendor/foundation/scss/foundation/components/breadcrumbs",
 //	"../vendor/foundation/scss/foundation/components/button-groups",
 //	"../vendor/foundation/scss/foundation/components/buttons",
 //	"../vendor/foundation/scss/foundation/components/clearing",
@@ -69,6 +69,7 @@
 	// - - - - - - - - - - - -
   	"ice/modules/carrousel",
   	"ice/modules/credits",
+  	"ice/modules/flex-block-grid",
   	"ice/modules/flex-grid",
   	"ice/modules/font-face",
   	"ice/modules/grid",
