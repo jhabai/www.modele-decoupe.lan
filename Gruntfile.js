@@ -10,15 +10,17 @@ module.exports = function (grunt) {
     // Les tâches par défaut
     grunt.registerTask('default', 'watch');
 
+    // Serveur PHP
+    grunt.registerTask('serve', [
+        'php',         // Start PHP Server
+        'browserSync', // Using the php instance as a proxy
+        'watch'        // Any other watch tasks you want to run
+    ]);
+
     // Copie
     grunt.registerTask('copyy', [
         'copy',
         'notify:copy'
-    ]);
-
-    // Serveur PHP
-    grunt.registerTask('server', [
-        'php'
     ]);
 
     // Les tâches de productions

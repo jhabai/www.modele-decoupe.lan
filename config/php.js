@@ -1,9 +1,8 @@
 module.exports = {
-  server: {
-    options: {
-      port: 9000,
-      keepalive: true,
-      open: true
+    dev: {
+        options: {
+            hostname: '127.0.0.1',
+            port: 8010
+        }
     }
-  }
 };
