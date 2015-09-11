@@ -10,8 +10,10 @@
 			</div> <!-- end l-container -->
 
 			<!-- close the off-canvas menu -->
-<!--			<a class="exit-off-canvas" role="button"></a>-->
 			<label for="left-off-canvas-toggle" class="exit-off-canvas" role="button"></label>
+			
+			<!-- reveal modal -->
+			<div class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog"></div>
 
 		</div> <!-- end inner-wrap -->
 

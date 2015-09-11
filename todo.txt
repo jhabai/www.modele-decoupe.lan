@@ -1,7 +1,7 @@
-- Ajouter reveal-modal par défaut
-- Ajouter la div ajax dans le footer
-- Remplacer carrousel par carousel (fichier et classe)
-- Sortir le select de la classe .select
-- Rajouter -webkit-appearance:none; sur les select
-- Déplacer le fichier _global dans app.scss
++ Ajouter reveal-modal par défaut
++ Ajouter la div ajax dans le footer
++ Remplacer carrousel par carousel (fichier et classe)
++ Sortir le select de la classe .select
++ Rajouter -webkit-appearance:none; sur les select
++ Déplacer le fichier _global dans app.scss
 

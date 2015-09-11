@@ -3,6 +3,7 @@
 
 @import 
     "settings",
+    "../vendor/foundation/scss/foundation/components/global",
 //	"foundation/grid",
 //	"../vendor/foundation/scss/foundation/components/accordion",
 	"../vendor/foundation/scss/foundation/components/alert-boxes",
@@ -67,7 +68,7 @@
 
 	// Modules
 	// - - - - - - - - - - - -
-  	"ice/modules/carrousel",
+  	"ice/modules/carousel",
   	"ice/modules/credits",
   	"ice/modules/flex-block-grid",
   	"ice/modules/flex-grid",

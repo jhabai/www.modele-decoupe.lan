@@ -10,6 +10,7 @@ module.exports = {
             'private/vendor/foundation/js/foundation/foundation.js',
             'private/vendor/foundation/js/foundation/foundation.equalizer.js',
             'private/vendor/foundation/js/foundation/foundation.interchange.js',
+            'private/vendor/foundation/js/foundation/foundation.reveal.js',
             'private/vendor/slick-carousel/slick/slick.min.js',
             'private/js/ice/navigation.js',
             'private/js/ice/grid.js',

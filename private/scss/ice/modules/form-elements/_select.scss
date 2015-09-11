@@ -21,23 +21,24 @@
 		bottom: 0;
 		background: white;
 		color: $select-icon-color;
-		font: rem-calc(14) icomoon;
+		font: $select-arrow-size icomoon;
 		text-align: center;
-		padding: rem-calc(10) rem-calc(16); 
+		padding: $select-arrow-padding;
         transform: rotate(-90deg);
 		pointer-events: none;
 	}
 
-	select {
-		height: $select-height;
-		line-height: $select-height;
-		color: $body-font-color;
-		font: rem-calc(16) $body-font-family;
-		border: 0;
-		outline: 0;
-        margin-bottom: 0;
-		padding-left: rem-calc(5);
-		cursor: pointer;
-	}
+}
 
+select {
+    height: $select-height;
+    line-height: $select-height;
+    color: $body-font-color;
+    font: $select-font-size $body-font-family;
+    border: 0;
+    outline: 0;
+    margin-bottom: 0;
+    padding-left: rem-calc(5);
+    cursor: pointer;
+    -webkit-appearance: none;
 }
