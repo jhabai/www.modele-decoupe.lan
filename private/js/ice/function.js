@@ -15,9 +15,9 @@ function movingElement($el, $elMoving) {
 
     for (var i = 0; i < $el.length; i++) {
         $elMoving[i].appendChild($el[i]);
-    };
+    }
 
-};
+}
 
 
 

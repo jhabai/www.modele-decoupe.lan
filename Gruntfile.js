@@ -8,7 +8,7 @@ module.exports = function (grunt) {
     grunt.initConfig(configs);
 
     // Les tâches par défaut
-    grunt.registerTask('default', 'watch');
+    grunt.registerTask('default', 'watch', 'jshint');
 
     // Serveur PHP
     grunt.registerTask('serve', [
@@ -25,6 +25,7 @@ module.exports = function (grunt) {
 
     // Les tâches de productions
     grunt.registerTask('prod', [
+        'jshint',
         'concat',
         'uglify',
         'sass',

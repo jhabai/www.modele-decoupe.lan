@@ -11,7 +11,7 @@ function containerMargin() {
 
     container.style.paddingTop = headerHeightBloc + 'px';
 
-};
+}
 
 // Si on est sur MAC
 if (isSafari) {
@@ -29,7 +29,7 @@ if (isSafari) {
     // Pour le reste, on l'execute tout de suite
     containerMargin();
 
-};
+}
 
 window.addEventListener('resize', function(event){
     containerMargin();
