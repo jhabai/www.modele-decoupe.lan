@@ -19,7 +19,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-notify": "^0.4.1",
     "grunt-php": "^1.5.0",
-    "grunt-sass": "~0.18.0",
+    "grunt-sass": "1.0.0",
     "grunt-svgmin": "^2.0.1",
     "gulp": "^3.9.0",
     "gulp-css-url-versioner": "^1.0.7",
