@@ -36,7 +36,7 @@ var header = document.getElementById('header-sticky'),
 // - - - - - - - - - - - -
 
 var hideClass = 'is-hidden',
-    activeClass = 'active';
+    activeClass = 'is-active';
 
 
 
@@ -46,4 +46,4 @@ var hideClass = 'is-hidden',
 var isChrome = navigator.userAgent.indexOf('Chrome') > -1,
     isExplorer = navigator.userAgent.indexOf('MSIE') > -1,
     isFirefox = navigator.userAgent.indexOf('Firefox') > -1,
-    isSafari = navigator.userAgent.indexOf("Safari") > -1;
+    isSafari = /^((?!chrome).)*safari/i.test(navigator.userAgent);

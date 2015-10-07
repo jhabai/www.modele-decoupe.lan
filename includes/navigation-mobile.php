@@ -9,7 +9,7 @@
                 <?php endfor; ?>
             </ul>
         </li>
-        <li class="active">
+        <li>
             <input type="radio" name="navigation-menu" id="submenu-2" class="show-submenu is-hidden">
             <label for="submenu-2">Un second sous-menu</label>
             <ul class="no-bullet submenu">
@@ -18,7 +18,7 @@
                 <?php endfor; ?>
             </ul>
         </li>
-        <li class="active">
+        <li>
             <input type="radio" name="navigation-menu" id="submenu-3" class="show-submenu is-hidden">
             <label for="submenu-3">Un second sous-menu</label>
             <ul class="no-bullet submenu">
@@ -27,7 +27,7 @@
                 <?php endfor; ?>
             </ul>
         </li>
-        <li class="active">
+        <li>
             <input type="radio" name="navigation-menu" id="submenu-4" class="show-submenu is-hidden">
             <label for="submenu-4">Un second sous-menu</label>
             <ul class="no-bullet submenu">

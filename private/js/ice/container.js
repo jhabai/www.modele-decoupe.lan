@@ -32,5 +32,8 @@ if (isSafari) {
 }
 
 window.addEventListener('resize', function(event){
+    
+    container.style.removeProperty('padding-top');
+    
     containerMargin();
 });

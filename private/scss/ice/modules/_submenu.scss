@@ -2,20 +2,11 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .show-submenu:checked {
-    + ul {
-        > li {
-            height: rem-calc(48);
-            opacity: 1;
-        }
-    }
+    ~ ul { display: block; }
 }
 
 .submenu {
-    > li {
-        overflow: hidden;
-        height: 0;
-        padding: 0;
-        transition: .4s;
-        opacity: 0;
-    }
+    display: none;
+    margin-left: 0;
+    margin-bottom: 0;
 }
