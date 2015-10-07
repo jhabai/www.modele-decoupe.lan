@@ -5,10 +5,9 @@
 // Documentation can be found at : http://foundation.zurb.com/docs
 
 $(document).foundation({
-	equalizer : {
-		// Specify if Equalizer should make elements equal height once they become stacked.
-		equalize_on_stack: true
-	}
+    abide : {
+        timeout : 100
+    }
 });
 
 
@@ -25,7 +24,7 @@ $(function() {
 	// Carousel
 	// - - - - - - - - - - - -
 	// Doc : https://github.com/kenwheeler/slick
-	$('#carousel').slick();
+	Foundation.utils.S('#carousel').slick();
 
 
 	// Navigation

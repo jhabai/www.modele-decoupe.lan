@@ -8,7 +8,7 @@ module.exports = {
             'private/js/ice/relocate.js',
             'private/vendor/jquery/dist/jquery.min.js',
             'private/vendor/foundation/js/foundation/foundation.js',
-            'private/vendor/foundation/js/foundation/foundation.equalizer.js',
+            'private/vendor/foundation/js/foundation/foundation.abide.js',
             'private/vendor/foundation/js/foundation/foundation.interchange.js',
             'private/vendor/foundation/js/foundation/foundation.reveal.js',
             'private/vendor/slick-carousel/slick/slick.min.js',

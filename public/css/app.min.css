@@ -2762,8 +2762,8 @@ button::-moz-focus-inner {
   padding: 0;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"]:not(.checkbox),
+input[type="radio"]:not(.radio) {
   display: none;
 }
 

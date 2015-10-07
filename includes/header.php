@@ -24,7 +24,7 @@
 </head>
 <body>
 
-    <input type="checkbox" id="left-off-canvas-toggle" class="left-off-canvas-toggle is-hidden">
+    <input type="checkbox" id="left-off-canvas-toggle" class="left-off-canvas-toggle">
 
     <div class="off-canvas-wrap" data-offcanvas>
 
