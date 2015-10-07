@@ -1,10 +1,10 @@
 module.exports = {
     dist: {
         src: [
-            '<%= config.privateJsPath %>/_setting.js',
+            '<%= config.privateJs %>/_setting.js',
             '<%= config.privateJsIce %>/function.js',
             '<%= config.privateJsIce %>/container.js',
-            '<%= config.privateJsPath %>/plugin/minwidth-relocate.min.js',
+            '<%= config.privateJs %>/plugin/minwidth-relocate.min.js',
             '<%= config.privateJsIce %>/relocate.js',
             '<%= config.bower %>/jquery/dist/jquery.min.js',
             '<%= config.bower %>/foundation/js/foundation/foundation.js',
@@ -14,7 +14,7 @@ module.exports = {
             '<%= config.bower %>/slick-carousel/slick/slick.min.js',
             '<%= config.privateJsIce %>/navigation.js',
             '<%= config.privateJsIce %>/grid.js',
-            '<%= config.privateJsPath %>/app.js'
+            '<%= config.privateJs %>/app.js'
         ],
         dest: '<%= config.publicJs %>'
     }
