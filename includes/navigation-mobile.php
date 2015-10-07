@@ -1,7 +1,7 @@
 <aside class="left-off-canvas-menu">
     <ul id="l-navigation-mobile" class="off-canvas-list l-navigation-mobile" role="navigation" aria-label="Navigation mobile">
         <li>
-            <input type="radio" name="navigation-menu" id="submenu-1" class="show-submenu is-hidden">
+            <input type="radio" name="navigation-menu" id="submenu-1" class="show-submenu">
             <label for="submenu-1">Un sous-menu</label>
             <ul class="no-bullet submenu">
                 <?php for($item = 1; $item <= 5; $item++): ?>
@@ -10,7 +10,7 @@
             </ul>
         </li>
         <li>
-            <input type="radio" name="navigation-menu" id="submenu-2" class="show-submenu is-hidden">
+            <input type="radio" name="navigation-menu" id="submenu-2" class="show-submenu">
             <label for="submenu-2">Un second sous-menu</label>
             <ul class="no-bullet submenu">
                 <?php for($item = 1; $item <= 5; $item++): ?>
@@ -19,7 +19,7 @@
             </ul>
         </li>
         <li>
-            <input type="radio" name="navigation-menu" id="submenu-3" class="show-submenu is-hidden">
+            <input type="radio" name="navigation-menu" id="submenu-3" class="show-submenu">
             <label for="submenu-3">Un second sous-menu</label>
             <ul class="no-bullet submenu">
                 <?php for($item = 1; $item <= 5; $item++): ?>
@@ -28,7 +28,7 @@
             </ul>
         </li>
         <li>
-            <input type="radio" name="navigation-menu" id="submenu-4" class="show-submenu is-hidden">
+            <input type="radio" name="navigation-menu" id="submenu-4" class="show-submenu">
             <label for="submenu-4">Un second sous-menu</label>
             <ul class="no-bullet submenu">
                 <?php for($item = 1; $item <= 5; $item++): ?>

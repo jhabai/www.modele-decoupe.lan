@@ -36,6 +36,11 @@
 	}
 }
 
+input[type="checkbox"],
+input[type="radio"] {
+    display: none;
+}
+
 .checkbox,
 .radio {
     display: block;
