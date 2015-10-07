@@ -1,7 +1,7 @@
 // Navigation mobile
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-.left-off-canvas-toggle:checked ~ .off-canvas-wrap > .inner-wrap {
+.left-off-canvas-toggle:checked + .off-canvas-wrap > .inner-wrap {
     transform: translate3d(15.625rem, 0, 0);
     
     .exit-off-canvas {
