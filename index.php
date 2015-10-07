@@ -79,7 +79,6 @@
             <div class="columns small-4 medium-4 large-4">
                 <button class="full">Envoyer</button>
                 <a href="" class="full button">Envoyer</a>
-                <a href="" class="full button button-secondary">Envoyer</a>
                 <button class="full disabled" disabled>Envoyer</button>
             </div>
         </form>

@@ -79,6 +79,13 @@ button,
     }
 }
 
+a.button {
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 // Firefox 2px fix
 button::-moz-focus-inner {
     border: 0;

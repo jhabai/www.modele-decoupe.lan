@@ -293,10 +293,10 @@ $paragraph-text-rendering: optimizeLegibility;
 // $code-padding: rem-calc(2) rem-calc(5) rem-calc(1);
 
 // We use these to style anchors
-// $anchor-text-decoration: none;
-// $anchor-text-decoration-hover: none;
-// $anchor-font-color: $primary-color;
-// $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
+$anchor-text-decoration: none;
+$anchor-text-decoration-hover: underline;
+$anchor-font-color: $primary-color;
+$anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -308,12 +308,12 @@ $paragraph-text-rendering: optimizeLegibility;
 // $list-font-family: $paragraph-font-family;
 // $list-font-size: $paragraph-font-size;
 // $list-line-height: $paragraph-line-height;
-// $list-margin-bottom: $paragraph-margin-bottom;
+$list-margin-bottom: 0;
 // $list-style-position: outside;
 // $list-side-margin: 1.1rem;
-// $list-ordered-side-margin: 1.4rem;
+$list-ordered-side-margin: 1.4rem;
 // $list-side-margin-no-bullet: 0;
-// $list-nested-margin: rem-calc(20);
+$list-nested-margin: rem-calc(20);
 // $definition-list-header-weight: $font-weight-bold;
 // $definition-list-header-margin-bottom: .3rem;
 // $definition-list-margin-bottom: rem-calc(12);

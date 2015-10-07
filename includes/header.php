@@ -19,6 +19,33 @@
     <link rel="canonical" href="[URL de la page]">
     <link rel="stylesheet" href="/public/css/app.min.css">
 
+    <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "Organization",
+        "legalName" : "Company Name",
+        "url" : "http://company-website.com/",
+        "contactPoint" : [{
+            "@type" : "ContactPoint",
+            "telephone" : "+1-646-350-2789",
+            "contactType" : "customer service"
+        }],
+        "logo" : "http://elitesem.com/wp-content/uploads/2014/03/Elite_SEM_Logo_2014.png",
+        "sameAs" : [
+            "http://www.facebook.com/company-name",
+            "http://www.twitter.com/company-name",
+            "http://plus.google.com/+company-name",
+            "https://www.youtube.com/user/company-name",
+            "http://www.linkedin.com/company/company-name",
+            "https://www.wikidata.org/wiki/company-name"
+        ],
+        "potentialAction" : {
+            "@type" : "SearchAction",
+            "target" : "http://company-website.com/?s={search_term}",
+            "query-input" : "required name=search_term"
+        }
+    }
+    </script>
     <script src="/public/js/prefixfree.min.js"></script>
     <script src="/public/js/modernizr.min.js"></script>
 </head>
