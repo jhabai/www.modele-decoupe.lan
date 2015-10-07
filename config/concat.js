@@ -1,20 +1,20 @@
 module.exports = {
     dist: {
         src: [
-            'private/js/_setting.js',
-            'private/js/ice/function.js',
-            'private/js/ice/container.js',
-            'private/js/plugin/minwidth-relocate.min.js',
-            'private/js/ice/relocate.js',
-            'private/vendor/jquery/dist/jquery.min.js',
-            'private/vendor/foundation/js/foundation/foundation.js',
-            'private/vendor/foundation/js/foundation/foundation.abide.js',
-            'private/vendor/foundation/js/foundation/foundation.interchange.js',
-            'private/vendor/foundation/js/foundation/foundation.reveal.js',
-            'private/vendor/slick-carousel/slick/slick.min.js',
-            'private/js/ice/navigation.js',
-            'private/js/ice/grid.js',
-            'private/js/app.js'
+            '<%= config.privateJsPath %>/_setting.js',
+            '<%= config.privateJsIce %>/function.js',
+            '<%= config.privateJsIce %>/container.js',
+            '<%= config.privateJsPath %>/plugin/minwidth-relocate.min.js',
+            '<%= config.privateJsIce %>/relocate.js',
+            '<%= config.bower %>/jquery/dist/jquery.min.js',
+            '<%= config.bower %>/foundation/js/foundation/foundation.js',
+            '<%= config.bower %>/foundation/js/foundation/foundation.abide.js',
+            '<%= config.bower %>/foundation/js/foundation/foundation.interchange.js',
+            '<%= config.bower %>/foundation/js/foundation/foundation.reveal.js',
+            '<%= config.bower %>/slick-carousel/slick/slick.min.js',
+            '<%= config.privateJsIce %>/navigation.js',
+            '<%= config.privateJsIce %>/grid.js',
+            '<%= config.privateJsPath %>/app.js'
         ],
         dest: '<%= config.publicJs %>'
     }

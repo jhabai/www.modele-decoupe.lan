@@ -8,7 +8,7 @@ module.exports = function (grunt) {
 
         // Config path default
         config: {
-            bower: 'private/vendor/foundation/scss',
+            bower: 'private/vendor',
             privateScss: 'private/scss',
             publicCssPath: 'public/css',
             publicCss: '<%= config.publicCssPath %>/app.min.css',

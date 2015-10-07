@@ -1,6 +1,6 @@
 module.exports = {
   options: {
-    includePaths: ['<%= config.bower %>']
+    includePaths: ['<%= config.bower %>/foundation/scss']
   },
   dist: {
     options: {
