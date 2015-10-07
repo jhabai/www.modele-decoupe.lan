@@ -4,7 +4,23 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     //loads the various task configuration files
-    var configs = require('load-grunt-configs')(grunt);
+    var configs = require('load-grunt-configs')(grunt, {
+
+        // Config path default
+        config: {
+            bower: 'private/vendor/foundation/scss',
+            privateScss: 'private/scss',
+            publicCssPath: 'public/css',
+            publicCss: '<%= config.publicCssPath %>/app.min.css',
+            privateJs: 'private/js',
+            privateJsIce: '<%= config.privateJs %>/ice',
+            publicJsPath: 'public/js',
+            publicJs: '<%= config.publicJsPath %>/app.min.js',
+            copy: 'V:/www.modele-decoupe.lan/str'
+        }
+
+    });
+
     grunt.initConfig(configs);
 
     // Les tâches par défaut

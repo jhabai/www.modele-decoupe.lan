@@ -1,5 +1,5 @@
 <?php include('includes/header.php') ?>
-            
+
     <?php include('includes/breadcrumb.php'); ?>
 
     <section class="columns">
@@ -7,7 +7,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid tempore nihil eius fuga, ipsam quisquam omnis aspernatur consectetur? Velit aliquid rem maiores culpa, iste accusantium, modi. Impedit expedita, consequatur repellat!</p>
         <p>Lorem ipsum dolor sit amet, consectetur <a href="" class="cb-iframe">adipisicing</a> elit. Aliquid tempore nihil eius fuga, ipsam quisquam omnis aspernatur consectetur? Velit aliquid rem maiores culpa, iste accusantium, modi. Impedit expedita, consequatur repellat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel magni, necessitatibus ipsa ut. Libero quo accusantium tenetur eos impedit, harum ut tempora error, sed nostrum iure dolor ab, fugiat fugit.</p>
     </section>
-    
+
     <section class="small-4">
         <ul class="small-block-grid-2 medium-block-grid-6 large-block-grid-4">
             <?php for ($i = 1; $i <= 16; $i++): ?>
@@ -58,17 +58,17 @@
                     <small class="error">Un champ obligatoire</small>
                 </div>
                 <div>
-                    <input type="checkbox" name="" id="checkbox">
+                    <input type="checkbox" name="" id="checkbox" class="checkbox">
                     <label for="checkbox">Une checkbox</label>
                 </div>
             </div>
             <div class="columns small-4 large-6">
                 <div>
-                    <input type="radio" name="radio" id="radio-1" required>
+                    <input type="radio" name="radio" id="radio-1" class="radio" required>
                     <label for="radio-1">Radio 1 obligatoire</label>
                 </div>
                 <div>
-                    <input type="radio" name="radio" id="radio-2" required>
+                    <input type="radio" name="radio" id="radio-2" class="radio" required>
                     <label for="radio-2">Radio 2</label>
                 </div>
             </div>

@@ -13,7 +13,7 @@ module.exports = {
                 '*.js',
                 '.bowerrc'
             ],
-            dest: 'V:/www.modele-decoupe.lan/str'
+            dest: '<%= config.copy %>'
         },
         ],
     }

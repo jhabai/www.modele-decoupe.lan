@@ -1,6 +1,6 @@
 module.exports = {
   options: {
-    includePaths: ['private/vendor/foundation/scss']
+    includePaths: ['<%= config.bower %>']
   },
   dist: {
     options: {
@@ -8,7 +8,7 @@ module.exports = {
       sourceMap: true
     },
     files: {
-      'public/css/app.min.css': 'private/scss/app.scss'
+      '<%= config.publicCss %>': '<%= config.privateScss %>/app.scss'
     }
   }
 };

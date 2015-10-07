@@ -1,7 +1,7 @@
 module.exports = {
     dev: {
         bsFiles: {
-            src: ['**/*.php', 'public/js/*.js', 'public/css/*.css']
+            src: ['**/*.php', '<%= config.publicJsPath %>/*.js', '<%= config.publicCssPath %>/*.css']
         },
         options: {
             proxy: '<%= php.dev.options.hostname %>:<%= php.dev.options.port %>', // our PHP server

@@ -16,6 +16,6 @@ module.exports = {
             'private/js/ice/grid.js',
             'private/js/app.js'
         ],
-        dest: 'public/js/app.min.js'
+        dest: '<%= config.publicJs %>'
     }
 };

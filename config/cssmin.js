@@ -1,7 +1,7 @@
 module.exports = {
-  target: {
-    files: {
-      'public/css/app.min.css': ['public/css/app.min.css']
+    target: {
+        files: {
+            '<%= config.publicCss %>': ['<%= config.publicCss %>']
+        }
     }
-  }
 };
